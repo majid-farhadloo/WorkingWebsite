@@ -1,0 +1,380 @@
+
+
+
+
+body {
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+/*Slider*/
+
+#low-width{
+      display: none;
+    }
+
+@media screen and (max-width: 550px){ 
+    #high-width{
+      display: none;
+    }
+    #low-width{
+      display: block;
+    }
+}
+
+#slide-show {
+    color: #fff;
+    color: hsl(0, 0%, 0%);
+    background: #000;
+	  background: hsl(0, 2%, 5%);
+    padding: 4rem 4rem;
+}
+
+#slideshow{
+  width: 100%;
+  display: block;
+  
+}
+
+/* #3 Display section*/
+
+/*title section for each section*/
+#videos1, #op-eds,#website_title {
+  font-weight: bold;
+  font-family: quicksand;
+  font-size: 2.75rem;
+  color: rgba(0,0,0,0.5);
+  width: 100%;
+  padding: 2rem;
+}
+
+  
+.info1, .info2 {
+  padding: 40px;
+  color: #000;
+}
+
+section .info1{
+  background:linear-gradient(0deg,rgba(255,255,255,0.4),rgba(0,0,0,0.4));
+  /*background-color: white;*/
+  height: 750px;
+  
+}
+
+/* make image on the same size*/
+.home-image{
+  width: 500px;
+  height: 500px;
+
+}
+
+
+
+ #video-desc, #op_eds_desc{
+  font-size:  1.75rem;
+  color: rgba(0,0,0,0.7);
+  padding: 2rem;
+  line-height: 2rem;
+ }
+
+
+#websites_section{
+  height: 525px;
+}
+
+
+#websites_section button{
+  width: 100%;
+  margin: 2rem 2rem 2rem 0rem;
+  padding: 4rem 4rem;
+  text-indent: center;
+  height: 120px;
+
+}
+
+
+/*Responsive*/
+
+@media screen and (max-width: 1539px) and (min-width: 1160px){ 
+    .content-area.lander-page {
+         margin-left: 0; 
+        padding-left: 0; 
+    }
+}
+
+
+@media screen and (max-width: 500px) and (min-width: 575px){ 
+    .content-area.lander-page {
+         margin-left: 0; 
+        padding-left: 0; 
+    }
+}
+
+
+
+
+@media (min-width: 850px) {
+    #website1,#website2,#website3{
+      width: 100%;
+      height: 60px;
+  }
+}
+
+
+@media screen and (max-width: 700px){ 
+
+  #video-desc, #op_eds_desc{
+
+  font-size: 1.5rem;
+}
+ 
+}
+
+
+
+@media screen and (max-width: 570px) and (min-width: 360px){ 
+   #learn-more {
+      padding-bottom:4rem;
+      margin-bottom:-4rem;
+    }
+}
+
+
+
+@media (min-width: 850px) {
+  #news {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px 0px 10px 10px;
+    /*margin-bottom: 2px;*/
+  }
+
+}
+
+/***************** Videos section *************/
+
+#videos .videos-section{
+   margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex:  row wrap;
+    -moz-box-flex:  row wrap;
+    -webkit-flex:  row wrap;
+    -ms-flex:  row wrap;
+    flex: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+#videos  .video-image{ 
+  width : 400px;
+  height:400px;
+}
+
+#videos .title{
+
+  text-align: center;
+  font-size: 4.5rem;
+  padding: 2rem;
+  color: #123;
+}
+
+/* OP-EDS */
+
+ 
+
+#testimonials {
+    padding: 4rem 0;
+    background: hsl(0, 0%, 90%);
+}
+
+
+#testimonials .title{
+
+  text-align: center;
+  font-size: 4.5rem;
+  padding: 2rem;
+  color: #123;
+}
+
+#divider{
+width: 50%;
+margin: auto;
+margin-bottom: 2rem;
+background-color: #123;
+height: 5px;
+padding: 2px;
+   }
+
+.testimonials{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex:  row wrap;
+    -moz-box-flex:  row wrap;
+    -webkit-flex:  row wrap;
+    -ms-flex:  row wrap;
+    flex: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.testimonials li {
+    padding: 2rem 0 3rem;
+    width: 100%;
+}
+
+.testimonial-thumb {
+    max-width: 30%;
+    height: 230px;
+    float: left;
+}
+
+.testimonial-img{
+  width: 450px;
+  height: 150px;
+}
+
+.testimonial-text {
+    float: left;
+    width: 60%;
+    margin-left: 10%;
+}
+.testimonial-thumb img {
+    border-radius: 210px;
+    border: 5px solid #fff;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    font-size: 24px;
+    font-size: 2.4rem;
+    margin: 1rem 0;
+}
+
+.testimonial-excerpt {
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+
+#testimonials .learn-more{
+
+  margin:auto;
+  font-size: 2.5rem;
+  padding: 2rem;
+  color: lightblue;
+}
+
+.button {
+  margin: .4em;
+  padding: 1em;
+  cursor: pointer;
+  background: $primaryColour;
+  text-decoration: none;
+  color: $secondaryColour;
+}
+
+
+/* Pulse */
+@keyframes pulse {
+  25% {
+    transform: scale(1.1);
+  }
+
+  75% {
+    transform: scale(.9);
+  }
+}
+
+.pulse {
+  display: inline-block;
+}
+  .pulse:hover {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+/* OP-EDS RESPONSIVE */ 
+
+@media screen and (min-width: 650px) {
+    .testimonials li {
+        padding: 4rem 4rem;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .testimonials li {
+        width: 33.3333333333%;
+        padding: 2rem 4rem;
+        float: left;
+    }
+    .testimonial-thumb {
+        max-width: 210px;
+        margin: 0 auto;
+        float: none;
+    }
+    
+    .testimonial-text {
+        float: none;
+        width: auto;
+        margin: 0;
+    }
+    
+    .testimonial-name {
+        text-align: center;
+    }
+}
+        
+
+
+/* Websites */
+
+#websites, #videos{
+  background-color: #e6e6e6;
+
+}
+#websites .title{
+
+  text-align: center;
+  font-size: 4.5rem;
+  padding: 2rem;
+  color: #123;
+}
+
+#websites .websites-section{
+   margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex:  row wrap;
+    -moz-box-flex:  row wrap;
+    -webkit-flex:  row wrap;
+    -ms-flex:  row wrap;
+    flex: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
