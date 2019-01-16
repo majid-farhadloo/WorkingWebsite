@@ -41,14 +41,15 @@
             <div id="animation" class="column category">
                <?php 
                   $link = get_field('video2_caption');
-                  $image = get_field('link2');
+                  // $image = get_field('link2');
+                  $img = get_field('pic2');
                   $src = get_field('video_source2');
                   if( $link ): ?>
                <a href="#video-selection" target="model-selection" 
                   onclick="window.frames[1].location.href='<?php echo $src; ?>'; return true;">
                   <figure>
                      <div>
-                        <img class="place-holder" src="<?php echo $image ?>">
+                        <img class="place-holder" src= "<?php echo $img['url']; ?>">
                         <figcaption class="caption"><?php echo $link; ?></figcaption>
                      </div>
                   </figure>
@@ -58,14 +59,15 @@
             <div id="animation" class="column category">
                <?php 
                   $link = get_field('video3_caption');
-                  $image = get_field('link3');
+                  // $image = get_field('link3');
+                  $img = get_field('pic3');
                   $src = get_field('video_source3');
                   if( $link ): ?>
                <a href="#video-selection" target="model-selection" 
                   onclick="window.frames[1].location.href='<?php echo $src; ?>'; return true;">
                   <figure>
                      <div>
-                        <img class="place-holder" src="<?php echo $image ?>">
+                         <img class="place-holder" src="<?php echo $img['url']; ?>">
                         <figcaption class="caption"><?php echo $link; ?></figcaption>
                      </div>
                   </figure>
@@ -75,14 +77,15 @@
             <div id="animation" class="column category">
                <?php 
                   $link = get_field('video4_caption');
-                  $image = get_field('link4');
+                  // $image = get_field('link4');
+                  $img = get_field('pic4');
                   $src = get_field('video_source4');
                   if( $link ): ?>
                <a href="#video-selection" target="model-selection" 
                   onclick="window.frames[1].location.href='<?php echo $src; ?>'; return true;">
                   <figure>
                      <div>
-                        <img class="place-holder" src="<?php echo $image ?>">
+                         <img class="place-holder" src="<?php echo $img['url']; ?>">
                         <figcaption class="caption"><?php echo $link; ?></figcaption>
                      </div>
                   </figure>
@@ -92,14 +95,15 @@
             <div id="animation" class="column category">
                <?php 
                   $link = get_field('video5_caption');
-                  $image = get_field('link5');
+                  // $image = get_field('link5');
+                  $img = get_field('pic5');
                   $src = get_field('video_source5');
                   if( $link ): ?>
                <a href="#video-selection" target="model-selection" 
                   onclick="window.frames[1].location.href='<?php echo $src; ?>'; return true;">
                   <figure>
                      <div>
-                        <img class="place-holder" src="<?php echo $image ?>">
+                         <img class="place-holder" src="<?php echo $img['url']; ?>">
                         <figcaption class="caption"><?php echo $link; ?></figcaption>
                      </div>
                   </figure>
@@ -109,14 +113,15 @@
             <div id="animation" class="column category">
                <?php 
                   $link = get_field('video6_caption');
-                  $image = get_field('link6');
+                  // $image = get_field('link6');
+                  $img = get_field('pic6');
                   $src = get_field('video_source6');
                   if( $link ): ?>
                <a href="#video-selection" target="model-selection" 
                   onclick="window.frames[1].location.href='<?php echo $src; ?>'; return true;">
                   <figure>
                      <div>
-                        <img class="place-holder" src="<?php echo $image ?>">
+                        <img class="place-holder" src="<?php echo $img['url']; ?>">
                         <figcaption class="caption"><?php echo $link; ?></figcaption>
                      </div>
                   </figure>
@@ -126,7 +131,7 @@
             <div id="animation" class="column category">
                <?php 
                   $link = get_field('video7_caption');
-                  $image = get_field('link7');
+                  // $image = get_field('link7');
                   $img = get_field('pic7');
                   $src = get_field('video_source7');  
                   if( $link ): ?>
@@ -144,14 +149,15 @@
             <div id="animation" class="column category">
                <?php 
                   $link = get_field('video8_caption');
-                  $image = get_field('link8');
+                  // $image = get_field('link8');
+                  $img = get_field('pic8');
                   $src = get_field('video_source8');
                   if( $link ): ?>
                <a href="#video-selection" target="model-selection" 
                   onclick="window.frames[1].location.href='<?php echo $src; ?>'; return true;">
                   <figure>
                      <div>
-                        <img class="place-holder" src="<?php echo $image ?>">
+                        <img class="place-holder" src="<?php echo $img['url']; ?>">
                         <figcaption class="caption"><?php echo $link; ?></figcaption>
                      </div>
                   </figure>
@@ -161,14 +167,15 @@
             <div id="animation" class="column category">
                <?php 
                   $link = get_field('video9_caption');
-                  $image = get_field('link9');
+                  // $image = get_field('link9');
+                  $img = get_field('pic9');
                   $src = get_field('video_source9');
                   if( $link ): ?>
                <a href="#video-selection" target="model-selection" 
                   onclick="window.frames[1].location.href='<?php echo $src; ?>'; return true;">
                   <figure>
                      <div>
-                        <img class="place-holder" src="<?php echo $image ?>">
+                        <img class="place-holder" src="<?php echo $img['url']; ?>">
                         <figcaption class="caption"><?php echo $link; ?></figcaption>
                      </div>
                   </figure>
@@ -178,15 +185,16 @@
             <div id="animation" class="column category">
                <?php 
                   $link = get_field('video10_caption');
-                  $image = get_field('link10');
+                  // $image = get_field('link10');
+                  $img = get_field('pic10');
                   $src = get_field('video_source10');
                   if( $link ): ?>
                <a href="#video-selection" target="model-selection" 
                   onclick="window.frames[1].location.href='<?php echo $src; ?>'; return true;">
                   <figure>
                      <div>
-                        <img class="place-holder" src="<?php echo $image ?>">
-                        <figcaption style="font-size: 1.3rem;" class="caption"><?php echo $link; ?></figcaption>
+                         <img class="place-holder" src="<?php echo $img['url']; ?>">
+                        <figcaption class="caption"><?php echo $link; ?></figcaption>
                      </div>
                   </figure>
                </a>
@@ -195,14 +203,15 @@
             <div id="animation" class="column category">
                <?php 
                   $link = get_field('video11_caption');
-                  $image = get_field('link11');
+                  // $image = get_field('link11');
+                  $img = get_field('pic11');
                   $src = get_field('video_source11');
                   if( $link ): ?>
                <a href="#video-selection" target="model-selection" 
                   onclick="window.frames[1].location.href='<?php echo $src; ?>'; return true;">
                   <figure>
                      <div>
-                        <img class="place-holder" src="<?php echo $image ?>">
+                         <img class="place-holder" src="<?php echo $img['url']; ?>">
                         <figcaption class="caption"><?php echo $link; ?></figcaption>
                      </div>
                   </figure>
@@ -240,14 +249,14 @@
    background: rgba(0,0,0,.7); /* transparent background */  
    color: #fff; 
    padding: 10px;    /* padding around text */
-   font-size: 1.3rem;
+   font-size: 1.5rem;
    }
    figure div {
    position: relative;
    display: inline-block;
    max-width: 80%;
    padding: 0;
-   font-size: 1.3rem;
+   font-size: 1.5rem;
    }
 
 /*
@@ -309,7 +318,7 @@
    background-size: cover;
    }
    .column {
-   width: 30%;
+   width: 23%;
    display: inline-block;
    margin: auto;
    padding: 5px;

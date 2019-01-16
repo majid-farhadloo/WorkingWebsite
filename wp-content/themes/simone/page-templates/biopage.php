@@ -53,13 +53,13 @@
    font-size: 50px;
    font-weight: bold;
    padding: 2rem;
-   font-family: quicksand;
+   font-family: Lato;
    text-align: center;
    }
 
    p{
    font-size: 1.95rem;
-   font-family: quicksand;
+   font-family: Lato;
    text-align: justify;
    letter-spacing: 2px;
    line-height: 40px;
@@ -276,7 +276,7 @@
   
 </style>
 
-<div id="primary" class="content-area">
+<div id="primary" class="content-area-lander-page">
     <main id="main" class="site-main" role="main">
         <section class="bio-template">
 

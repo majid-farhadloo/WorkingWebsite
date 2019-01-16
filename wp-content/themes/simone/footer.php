@@ -10,7 +10,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer style="height: 110px;" id="colophon" class="site-footer" role="contentinfo">
             <?php get_sidebar( 'footer' ); ?>
 		<div class="site-info">
 			<?php do_action( 'simone_credits' ); ?>

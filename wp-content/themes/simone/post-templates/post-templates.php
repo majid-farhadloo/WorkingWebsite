@@ -9,6 +9,10 @@ get_header();
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 250, 220, 0.7));
 }
 
+body{
+	font-family: Lato;
+}
+
 #post {
     width: 50%;
     margin: auto;

@@ -13,12 +13,77 @@ get_header(); ?>
             <section id="slide-show">
                 <!-- <h2>Title</h2> -->
                 <div id="high-width">
-                    <?php echo do_shortcode('[masterslider id="4"]'); ?>
+                    <?php echo do_shortcode('[masterslider id="7"]'); ?>
                 </div>
                 <div id="low-width" onload="switch();">
                     <?php echo do_shortcode('[masterslider id="5"]'); ?>
                 </div>
             </section>
+
+
+
+
+            <!-- *********************************************** OP-EDS ******************************* -->
+            <section id="testimonials">
+                <div class="indent clear">
+                    <div class="title">Op-Eds</</div>
+                        <hr id="divider">
+                        <?php 
+                                $args = array(
+                                    'posts_per_page' => 3,
+                                    'orderby' => 'date'
+                                    // 'category_name' => 'testimonials'
+                                );
+
+                                $query = new WP_Query( $args );
+                                // The Loop
+                                if ( $query->have_posts() ) {
+                                    echo '<ul class="testimonials">';
+                                    while ( $query->have_posts() ) {
+                                        $query->the_post();
+                                        echo '<li class="clear">';
+                                        // echo '<figure class="testimonial-thumb">';
+                                        // if ( get_the_post_thumbnail() ) {
+                                        //  the_post_thumbnail( "full", array("class" => "testimonial-img") );
+                                        // } else {
+                                        // echo '<img src="http://localhost/dariusassemi/wp-content/uploads/2018/11/clever-visuals-712887-unsplash-1.jpg">';
+                                        // }
+                                        // // the_post_thumbnail('testimonial-mug');
+                                        // echo '</figure>';
+                                        echo '<aside class="testimonial-text">';
+                                        // echo '<h3 class="testimonial-name">' . get_the_title() . '</h3>';
+                                        echo '<div class="testimonial-excerpt">';
+                                        // the_content('');
+                                        $content = get_the_content();
+                                         echo '<div class="testimonial-content">'; 
+                                        if(strlen($content)<300+10) echo mb_strimwidth($content, 0, 350, '<br><span><a href="' . get_permalink() . '">[Read more]</a></span>');
+                                        $break_pos = strpos($content, ' ', 380);//find next space after desired length
+                                        $visible = substr($content, 0, $break_pos);
+                                        echo '</div>'; 
+                                        echo balanceTags($visible) . ' ... <br><span><a style ="font-size:2rem; padding:1.5rem; color:#188;" href="' . get_permalink() . '">Read More ...</a></span>';
+                                        echo '</div>';
+                                        echo '</aside>';
+                                        echo '</li>';
+                                    }
+                                    echo '</ul>';
+                                }
+
+                                /* Restore original Post Data */
+                                wp_reset_postdata();
+                                ?>
+
+                            <div>
+                                <a rel="pulse" class="button pulse" href="http://localhost/dariusassemi/post/">
+                                    <button>View All</button>
+                                </a>
+                            </div>
+
+                    </div>
+
+            </section>
+            <br>
+
+              <!-- *********************************************** videos ******************************* -->
 
             <section id="videos">
                 <div class="indent clear">
@@ -57,7 +122,7 @@ get_header(); ?>
 
                             <div>
                                 <a rel="pulse" class="button pulse" href="http://localhost/dariusassemi/videos/">
-                                    <button>Watch More</button>
+                                    <button>View All</button>
                                 </a>
                             </div>
 
@@ -65,63 +130,7 @@ get_header(); ?>
             </section>
             <br>
 
-            <!-- *********************************************** OP-EDS ******************************* -->
-            <section id="testimonials">
-                <div class="indent clear">
-                    <div class="title">Op-Eds</</div>
-                        <hr id="divider">
-                        <?php 
-                                $args = array(
-                                    'posts_per_page' => 3,
-                                    'orderby' => 'rand'
-                                    // 'category_name' => 'testimonials'
-                                );
-
-                                $query = new WP_Query( $args );
-                                // The Loop
-                                if ( $query->have_posts() ) {
-                                    echo '<ul class="testimonials">';
-                                    while ( $query->have_posts() ) {
-                                        $query->the_post();
-                                        echo '<li class="clear">';
-                                        echo '<figure class="testimonial-thumb">';
-                                        if ( get_the_post_thumbnail() ) {
-                                         the_post_thumbnail( "full", array("class" => "testimonial-img") );
-                                        } else {
-                                        echo '<img src="http://localhost/dariusassemi/wp-content/uploads/2018/11/clever-visuals-712887-unsplash-1.jpg">';
-                                        }
-                                        // the_post_thumbnail('testimonial-mug');
-                                        echo '</figure>';
-                                        echo '<aside class="testimonial-text">';
-                                        // echo '<h3 class="testimonial-name">' . get_the_title() . '</h3>';
-                                        echo '<div class="testimonial-excerpt">';
-                                        // the_content('');
-                                        $content = get_the_content();
-                                         echo '<div class="testimonial-content">'; 
-                                        if(strlen($content)<300+10) echo mb_strimwidth($content, 0, 350, '<br><span><a href="' . get_permalink() . '">[Read more]</a></span>');
-                                        $break_pos = strpos($content, ' ', 380);//find next space after desired length
-                                        $visible = substr($content, 0, $break_pos);
-                                        echo '</div>'; 
-                                        echo balanceTags($visible) . ' ... <br><span><a style ="font-size:2rem; padding:1.5rem; color:#188;" href="' . get_permalink() . '">Read More ...</a></span>';
-                                        echo '</div>';
-                                        echo '</aside>';
-                                        echo '</li>';
-                                    }
-                                    echo '</ul>';
-                                }
-
-                                /* Restore original Post Data */
-                                wp_reset_postdata();
-                                ?>
-
-                            <div>
-                                <a rel="pulse" class="button pulse" href="http://localhost/dariusassemi/post/">
-                                    <button>Learn More</button>
-                                </a>
-                            </div>
-
-                    </div>
-            </section>
+     
             <br>
 
             <section id="websites">
@@ -133,20 +142,20 @@ get_header(); ?>
                             <li id="website">
                                 <br>
 
-                                <a href="https://www.gvhomes.com/"><img width="350" height="250" src="http://localhost/dariusassemi/wp-content/uploads/2019/01/download-1.png"></a>
+                                <a href="https://www.gvhomes.com/"><img width="350" height="250" src="http://localhost/dariusassemi/wp-content/uploads/2019/01/Granville-Homes-2015-logo.png"></a>
 
                             </li>
                             <li id="website">
 
                                 <br>
-                                <a href="http://www.gvhomeofhope.com/news-dates/"><img src="http://localhost/dariusassemi/wp-content/uploads/2019/01/images-2.png"></a>
+                                <a href="http://www.gvhomeofhope.com/news-dates/"><img width="350" height="250" src="http://localhost/dariusassemi/wp-content/uploads/2019/01/2010_HOHLogo.png"></a>
 
                             </li>
 
                             <li id="website">
                                 <br>
 
-                                <a href="https://gvwire.com/"><img src="http://localhost/dariusassemi/wp-content/uploads/2019/01/download-2.png"></a>
+                                <a href="https://gvwire.com/"><img width="350" height="250" src="http://localhost/dariusassemi/wp-content/uploads/2019/01/GV-Wire-2018_web.png"></a>
 
                             </li>
                         </ul>
@@ -156,9 +165,8 @@ get_header(); ?>
             <!-- #testimonials -->
 
             </section>
-            <br><br><br>
 
-            <section id="news">
+           <!--  <section id="news">
 
                 <section class="info1">
                     <h2 id="videos1">Videos</h2>
@@ -177,7 +185,7 @@ get_header(); ?>
                         <?php the_field('title_video_section'); ?>
                     </p>
                     <div id="learn-more">
-                        <a href="http://localhost/dariusassemi/videos/" " class="link_read_more ">Learn more...</a>
+                        <a href="http://localhost/dariusassemi/videos/" " class="link_read_more ">View All...</a>
                             </div>
                 </section>
 
@@ -196,7 +204,7 @@ get_header(); ?>
                             </p>
                             <?php endif; ?>
                                 <div id="learn-more">
-                                    <a href="http://localhost/dariusassemi/post/" class="link_read_more">Learn more...</a>
+                                    <a href="http://localhost/dariusassemi/post/" class="link_read_more">View All...</a>
                                 </div>
                 </section>
 
@@ -216,7 +224,7 @@ get_header(); ?>
                         </a>
                     </section>
                 </section>
-            </section>
+            </section> -->
 
         </main>
         <!-- #main -->

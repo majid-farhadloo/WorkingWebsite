@@ -11,7 +11,7 @@ get_header(); ?>
         }
         
         body {
-            background-color: red;
+            font-family: Lato;
         }
 
         #title{
@@ -20,7 +20,7 @@ get_header(); ?>
             text-align: center;
         }
     </style>
-    <div id="primary" class="content-area">
+    <div id="primary" class="content-area-lander-page">
         <main id="main" class="site-main" role="main">
 
 
@@ -74,11 +74,13 @@ get_header(); ?>
 	?>
 
 
-.content-area{
+.content-area-lander-page{
 	 background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(255,250,220,0.7)),url('<?php echo $image['url'] ?>');
 	 /*background-image: url(' ');*/
-  	 background-size:cover;
-  	 background-position: center;
+  	 background-size:auto;
+  	 background-position: right -30px;
+     background-repeat: no-repeat;
+
   	 /*max-height: 1200px;*/
 }
 

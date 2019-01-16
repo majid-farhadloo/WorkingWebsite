@@ -72,7 +72,7 @@
 
 get_header(); ?>
 
-    <div id="primary" class="content-area">
+    <div id="primary" class="content-area-lander-page">
         <main id="main" class="site-main" role="main">
 
             <style type="text/css">
@@ -156,7 +156,7 @@ get_header(); ?>
 	$image = get_field('background-img');
 	?>
 
-.content-area{
+.content-area-lander-page{
 	  background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(255,250,220,0.7)),url('<?php echo $image['url'] ?>');
   	background-size:cover;
   	background-position: center;
