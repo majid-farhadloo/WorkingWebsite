@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-    <div id="primary" class="content-area-lander-page">
+    <div id="primary" class="content-area lander-page">
         <main id="main" class="site-main" role="main">
 
             <section id="slide-show">
@@ -101,21 +101,21 @@ get_header(); ?>
                                 <li id="video">
                                     <br>
                                     <a href="<?php  the_field ('video1-url') ?>" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true">
-                                    <img class="video-image" src="<?php echo $image1['url']; ?>" alt="<?php echo $image1['alt']; ?>" /></a>
+                                    <img style="border-radius: 20%;" class="video-image" src="<?php echo $image1['url']; ?>" alt="<?php echo $image1['alt']; ?>" /></a>
 
                                 </li>
 
                                 <li id="video">
                                     <br>
                                     <a href="<?php  the_field ('video2-url') ?>" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true">
-                                    <img class="video-image" src="<?php echo $image2['url']; ?>" alt="<?php echo $image2['alt']; ?>" /></a>
+                                    <img style="border-radius: 20%;"  class="video-image" src="<?php echo $image2['url']; ?>" alt="<?php echo $image2['alt']; ?>" /></a>
 
                                 </li>
 
                                 <li id="video">
                                     <br>
                                     <a href="<?php  the_field ('video3-url') ?>" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true">
-                                    <img class="video-image" src="<?php echo $image3['url']; ?>" alt="<?php echo $image3['alt']; ?>" /></a>
+                                    <img style="border-radius: 20%;"  class="video-image" src="<?php echo $image3['url']; ?>" alt="<?php echo $image3['alt']; ?>" /></a>
                                 </li>
 
                             </ul>
@@ -142,20 +142,20 @@ get_header(); ?>
                             <li id="website">
                                 <br>
 
-                                <a href="https://www.gvhomes.com/"><img width="350" height="250" src="http://localhost/dariusassemi/wp-content/uploads/2019/01/Granville-Homes-2015-logo.png"></a>
+                                <a href="https://www.gvhomes.com/"><img class="web1" width="350" height="250" src="http://localhost/dariusassemi/wp-content/uploads/2019/01/Granville-Homes-2015-logo.png"></a>
 
                             </li>
                             <li id="website">
 
                                 <br>
-                                <a href="http://www.gvhomeofhope.com/news-dates/"><img width="350" height="250" src="http://localhost/dariusassemi/wp-content/uploads/2019/01/2010_HOHLogo.png"></a>
+                                <a href="http://www.gvhomeofhope.com/news-dates/"><img class="web2" width="350" height="250" src="http://localhost/dariusassemi/wp-content/uploads/2019/01/2010_HOHLogo.png"></a>
 
                             </li>
 
                             <li id="website">
                                 <br>
 
-                                <a href="https://gvwire.com/"><img width="350" height="250" src="http://localhost/dariusassemi/wp-content/uploads/2019/01/GV-Wire-2018_web.png"></a>
+                                <a href="https://gvwire.com/"><img class="web3" width="350" height="250" src="http://localhost/dariusassemi/wp-content/uploads/2019/01/GV-Wire-2018_web.png"></a>
 
                             </li>
                         </ul>

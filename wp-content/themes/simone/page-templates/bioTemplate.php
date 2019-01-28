@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 /**
  * Template Name: Bio Template
 */
@@ -76,4 +76,4 @@ get_header(); ?>
             <div class="des-section">
             <p class="description-section"><?php the_field('description'); ?></p>
             </div>
-         </div> -->
+         </div> --> -->

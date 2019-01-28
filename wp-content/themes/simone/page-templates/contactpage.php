@@ -66,16 +66,7 @@
 
 ?>
 
-
-
-<?php
-
-get_header(); ?>
-
-    <div id="primary" class="content-area-lander-page">
-        <main id="main" class="site-main" role="main">
-
-            <style type="text/css">
+ <style type="text/css">
                 .error {
                     padding: 5px 9px;
                     border: 1px solid red;
@@ -95,33 +86,41 @@ get_header(); ?>
                 }
 
                 #divider {
-			         width: 75%;
-			         text-align: center;
-			         height: 5px;
-			         background-color: rgba(0,0,0,0.7);
-			         color: #123;
-			         margin-top: 15px;
-			         margin-bottom: 15px;
-    				}
+               width: 75%;
+               text-align: center;
+               height: 5px;
+               background-color: rgba(0,0,0,0.7);
+               color: #123;
+               margin-top: 15px;
+               margin-bottom: 15px;
+            }
 
-    				#title{
-    					font-size: 3.5rem;
-    					padding: 2.5rem;
-    					text-align: center;
-    				}
-            </style>
+            #title{
+              font-size: 3.5rem;
+              padding: 2.5rem;
+              text-align: center;
+            }
+</style>
 
 
-            <h2 id="title">Contact Form</h2>
-            <hr id="divider">
-            <section id="contact">
+
+<?php
+
+get_header(); ?>
+
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+
+     <h2 id="title">Contact Form</h2>
+     <hr id="divider"> 
+      <section id="contact">
             <div id="respond">
                 <?php echo $response; ?>
                     <form action="<?php the_permalink(); ?>" method="post">
                         <input class="form-control" type="text" name="message_name" placeholder="Name" value="<?php echo esc_attr($_POST['message_name']); ?>"><br>
                         <input class="form-control" type="text" name="message_email" placeholder="Email" value="<?php echo esc_attr($_POST['message_email']); ?>"><br>
                         <textarea class="form-control"  style="height: 180px;" placeholder="Your Message" type="text" name="message_text" >
-                        	<?php echo esc_textarea($_POST['message_text']); ?>
+                            <?php echo esc_textarea($_POST['message_text']); ?>
                         </textarea> 
                             <!-- <label class="align" for="message_human" style="margin: a" ">Human Verification: <span>*</span> -->
                         <br>
@@ -133,22 +132,18 @@ get_header(); ?>
                     </form>
             </div>
             </section>
-            
-            <div class="social">
-                <ul>
-                    <li><a href="https://www.facebook.com/majid.farhadloo"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://www.instagram.com/majidcsci/"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/majid-farhadloo-b68839113/"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-       
 
-        </main>
-        <!-- #main -->
-    </div>
-    <!-- #primary -->
+    <div class="social">
+            <ul>
+              <li><a href="https://www.facebook.com/majid.farhadloo"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/majidcsci/"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/majid-farhadloo-b68839113/"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+    </div> 
+    </main><!-- #main -->
+</div><!-- #primary -->  
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>
 
    <style type="text/css">
 
@@ -160,7 +155,16 @@ get_header(); ?>
 	  background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(255,250,220,0.7)),url('<?php echo $image['url'] ?>');
   	background-size:cover;
   	background-position: center;
+
 	}
+
+  #primary{
+    height: 100%;
+     background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(255,250,220,0.7)),url('<?php echo $image['url'] ?>');
+    background-size:cover;
+    background-position: center;
+
+  }
 
 	#contact{
 	padding: 5rem;
