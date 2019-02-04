@@ -447,7 +447,6 @@ img {
 
 </style>   
 
-<br>
 <div id="primary" class="content-area-lander-page">
     <main id="main" class="site-main" role="main">
 

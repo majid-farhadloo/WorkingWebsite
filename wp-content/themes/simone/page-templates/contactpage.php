@@ -99,6 +99,9 @@
               font-size: 3.5rem;
               padding: 2.5rem;
               text-align: center;
+              font-family: Lato;
+              font-weight: bold;
+
             }
 </style>
 
@@ -111,7 +114,7 @@ get_header(); ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-     <h2 id="title">Contact Form</h2>
+     <p style="font-family: Lato;" id="title">Contact Form</p>
      <hr id="divider"> 
       <section id="contact">
             <div id="respond">
@@ -155,6 +158,8 @@ get_header(); ?>
 	  background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(255,250,220,0.7)),url('<?php echo $image['url'] ?>');
   	background-size:cover;
   	background-position: center;
+
+    font-family: Lato;
 
 	}
 

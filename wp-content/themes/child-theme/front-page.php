@@ -101,21 +101,21 @@ get_header(); ?>
                                 <li id="video">
                                     <br>
                                     <a href="<?php  the_field ('video1-url') ?>" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true">
-                                    <img style="border-radius: 20%;" class="video-image" src="<?php echo $image1['url']; ?>" alt="<?php echo $image1['alt']; ?>" /></a>
+                                    <img class="v-cover1" style="border-radius: 20%;" class="video-image" src="<?php echo $image1['url']; ?>" alt="<?php echo $image1['alt']; ?>" /></a>
 
                                 </li>
 
                                 <li id="video">
                                     <br>
                                     <a href="<?php  the_field ('video2-url') ?>" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true">
-                                    <img style="border-radius: 20%;"  class="video-image" src="<?php echo $image2['url']; ?>" alt="<?php echo $image2['alt']; ?>" /></a>
+                                    <img class="v-cover2" style="border-radius: 20%;"  class="video-image" src="<?php echo $image2['url']; ?>" alt="<?php echo $image2['alt']; ?>" /></a>
 
                                 </li>
 
                                 <li id="video">
                                     <br>
-                                    <a href="<?php  the_field ('video3-url') ?>" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true">
-                                    <img style="border-radius: 20%;"  class="video-image" src="<?php echo $image3['url']; ?>" alt="<?php echo $image3['alt']; ?>" /></a>
+                                    <a href="<?php  the_field ('video3-url') ?>" data-featherlight="iframe" data-featherlight-iframe-width="640" data-featherlight-iframe-height="480" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true"><img class="v-cover3" style="border-radius: 20%;" class="video-image" src="<?php echo $image3['url']; ?>" alt="<?php echo $image3['alt']; ?>" />
+                                </a>
                                 </li>
 
                             </ul>
@@ -165,6 +165,19 @@ get_header(); ?>
             <!-- #testimonials -->
 
             </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
            <!--  <section id="news">
 

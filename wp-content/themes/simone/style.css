@@ -63,6 +63,8 @@ and Blueprint http://www.blueprintcss.org/
 
 body{
     font-family: Lato;
+    /*height: 100%;*/
+    /*background-size: cover;*/
 }
 
 
@@ -77,6 +79,8 @@ left: 0;
 .shifted {
     margin-top: 54px;
 }
+
+
 
 /*Sticky menue on the top*/
 

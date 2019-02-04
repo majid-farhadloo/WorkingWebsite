@@ -193,6 +193,38 @@ section .info1{
 
 
 
+
+
+
+<?php
+
+ $image3 = get_field('video3-image');
+
+?>
+
+.full{
+  background: url("echo $image3['url']") 0 0 no-repeat;
+  min-height: 301px;
+  margin-bottom: 30px;
+}
+
+.full:hover .overlay-effect,  .overlay-effect, .half2:hover .overlay-effect {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.overlay-effect {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(259, 67, 95, 0.7);
+  /* overflow:hidden; */
+}
+
 /* OP-EDS */
 
  
@@ -383,5 +415,5 @@ padding: 2px;
     justify-content: space-around;
 }
 
-.web1,.web2,.web3 { transition: all 0.9s ease-in-out; }
-.web1:hover,.web3:hover,.web2:hover { transform: scale(1.2); }
+.web1,.web2,.web3, .v-cover1,.v-cover2,.v-cover3{ transition: all 0.9s ease-in-out; }
+.web1:hover,.web3:hover,.web2:hover, .v-cover1:hover,.v-cover2:hover,.v-cover3:hover{ transform: scale(1.2); }
