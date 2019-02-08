@@ -5,32 +5,31 @@
    
    get_header(); ?>
 
-<style type="text/css">
-    
-.shifted {
-    margin-top: 54px;
-}
 
-</style>
 
-<style type="text/css">
-
+<style type="text/css"> 
 
 #primary {
     /*background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 250, 220, 0.7));*/
     background-size: cover;
     background-position: center;
     font-family: Lato;
+    padding: 0px;
 }
 
 @media screen and (max-width: 1539px) and (min-width: 1160px) {
-    .content-area.lander-page {
+    .content-area-lander-page {
         margin-left: 0;
         padding-left: 0;
     }
 }
 
-
+@media screen and (max-width: 500px) and (min-width: 575px) {
+    .content-area-lander-page {
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
 
 @-webkit-keyframes slide {
     100% {
@@ -45,7 +44,8 @@
 }
 
 .mySlides {
-    display: none
+    display: none;
+    margin-left: 7.5vw;
 }
 
 img {
@@ -59,14 +59,14 @@ img {
     max-width: 1000px;
     position: relative;
     margin: auto;
-    margin-top: 15vh;
-
+    margin-top: 7vh;
+    /*margin: auto;*/
 }
 
 #preview img {
     width: 670px;
     height: 430px;
-    margin-left: 7vw; 
+    /*margin-left: 7vw; */
 }
 
 #video {
@@ -98,14 +98,14 @@ img {
     position: absolute;
     top: 50%;
     width: auto;
-    padding: 16px;
+    padding: 20px 18px;
     margin-top: -22px;
     color: black;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
-    margin-left: -3.5vw;
+    margin-left: -10.5vw;
     user-select: none;
 }
 
@@ -113,7 +113,7 @@ img {
 /* Position the "next button" to the right */
 
 .next {
-    right: 0;
+    right: 1;
     border-radius: 3px 0 0 3px;
 }
 
@@ -140,6 +140,7 @@ img {
     /*margin-bottom: 1.5vh;*/
     font-size: 3.5rem;
     color: black;
+    margin-left: -4vw;
 }
 
 
@@ -211,7 +212,7 @@ img {
 
 #divider {
     width: 40%;
-    margin: auto;
+    margin-left: 8vw;
     margin-top: 4vh;
     margin-bottom: 2rem;
     background-color: #123;
@@ -235,10 +236,10 @@ img {
 
 /* button setting for next and previous */
 
+.w3-position {
+    /*margin: auto;*/
+    margin-left: 20vw;
 
-.w3-position{
-
-  margin-left: 17.5vw;
 }
 
 .w3-black:hover {
@@ -249,7 +250,7 @@ img {
 .w3-button {
     border: none;
     display: inline-block;
-    padding: 12px 18px;
+    padding: 20px 25px;
     vertical-align: middle;
     overflow: hidden;
     text-decoration: none;
@@ -259,6 +260,7 @@ img {
     cursor: pointer;
     white-space: nowrap;
     font-size: 2rem;
+    margin-left: -1.5vw;
 }
 
 .w3-button {
@@ -287,18 +289,75 @@ img {
     width: 1550px;
 }
 
+
 /*Responsive*/
 
 @media screen and (min-width: 320px) and (max-width: 580px) {
-    
-
-#preview img {
-
-    width: 100%;
-    height: 300px;      
+    .title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    #preview img {
+        width: 100%;
+        height: 300px;
+        margin-left: -3vw;
+    }
+    #divider {
+        /*margin: auto;*/
+        margin-left: 25vw;
+    }
+    .w3-position {
+        margin-left: 30.5vw;
+    }
 }
 
+@media screen and (min-width: 580px) and (max-width: 768px) {
+
+    .title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    #preview img {
+        width: 75%;
+        height: 300px;
+        margin-left: 10vw;
+    }
+    #divider {
+        /*margin: auto;*/
+        margin-left: 25vw;
+    }
+    .w3-position {
+        margin-left: 35.5vw;
+    }
 }
+
+@media screen and (min-width:769px) and (max-width:1200px) {
+
+    .title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    #preview img {
+        width: 75%;
+        height: 450px;
+        margin-left: 10vw;
+    }
+    #divider {
+        /*margin: auto;*/
+        margin-left: 25vw;
+    }
+    .w3-position {
+        margin-left: 38.5vw;
+    }
+
+    .text{
+        text-align: center;
+        margin-left: 0vw;
+    }
+}
+
+
+
 
 /***************************** Testmonila video section ****************************************/
 
@@ -379,13 +438,13 @@ img {
         margin-left: 19.5vw;
     }
     #video1 p {
-        margin:auto;
+        margin: auto;
         font-size: 1.2rem;
         width: 80%;
     }
     #video1 img {
         height: 300px;
-        width:  650px;
+        width: 650px;
         border-radius: 70%;
         margin: auto;
     }
@@ -403,15 +462,12 @@ img {
         height: 150px;
         border-radius: 70%;
     }
-
     #video1 p {
-        margin:auto;
+        margin: auto;
         font-size: 1.4rem;
         width: 80%;
     }
-    
 }
-
 
 @media screen and (min-width: 800px) and (max-width: 1200px) {
     .text {
@@ -425,24 +481,20 @@ img {
         height: 350px;
         border-radius: 70%;
     }
-
     #video1 p {
-        margin:auto;
+        margin: auto;
         font-size: 1.4rem;
         width: 80%;
     }
-
-     #video1 a {
-        
-      text-align: center;
-      margin-left: 15vw;
+    #video1 a {
+        text-align: center;
+        margin-left: 15vw;
     }
-    
 }
 
-
-.upper-section, .lower-section{
-  background-color: #e6e6e6;
+.upper-section,
+.lower-section {
+    background-color: #e6e6e6;
 }
 
 </style>   
@@ -460,8 +512,9 @@ img {
         </div>
         <br>
 
-<!-- ************************************************************************************************************-->      <div class="mySlides fade">
-        <div class="numbertext">1 / 11</div>
+<!-- ************************************************************************************************************-->      
+<div class="mySlides fade">
+        <!-- <div class="numbertext">1 / 11</div> -->
         <?php 
             $link = get_field('video1_caption');
             $img = get_field('pic1-slider');
@@ -481,7 +534,7 @@ img {
 
 <!-- ************************************************************************************************************-->
     <div class="mySlides fade">
-        <div class="numbertext">2 / 11</div>
+        <!-- <div class="numbertext">2 / 11</div> -->
         <?php 
             $link = get_field('video2_caption');
             $img = get_field('pic2-slider');
@@ -501,7 +554,7 @@ img {
 <!-- ************************************************************************************************************-->
 
      <div class="mySlides fade">
-        <div class="numbertext">3 / 11</div>
+        <!-- <div class="numbertext">3 / 11</div> -->
         <?php 
             $link = get_field('video3_caption');
             $img = get_field('pic3-slider');
@@ -521,7 +574,7 @@ img {
 <!-- ************************************************************************************************************-->
 
     <div class="mySlides fade">
-        <div class="numbertext">4 / 11</div>
+        <!-- <div class="numbertext">4 / 11</div> -->
         <?php 
             $link = get_field('video4_caption');
             $img = get_field('pic4-slider');
@@ -541,7 +594,7 @@ img {
 <!-- ************************************************************************************************************-->
 
  <div class="mySlides fade">
-        <div class="numbertext">5 / 11</div>
+        <!-- <div class="numbertext">5 / 11</div> -->
         <?php 
             $link = get_field('video5_caption');
             $img = get_field('pic5-slider');
@@ -561,7 +614,7 @@ img {
 
 <!-- ************************************************************************************************************-->
     <div class="mySlides fade">
-        <div class="numbertext">5 / 11</div>
+        <!-- <div class="numbertext">5 / 11</div> -->
         <?php 
             $link = get_field('video5_caption');
             $img = get_field('pic6-slider');
@@ -582,7 +635,7 @@ img {
 <!-- ************************************************************************************************************-->
 
  <div class="mySlides fade">
-        <div class="numbertext">7 / 11</div>
+        <!-- <div class="numbertext">7 / 11</div> -->
         <?php 
             $link = get_field('video7_caption');
             $img = get_field('pic7-slider');
@@ -602,7 +655,7 @@ img {
 
 <!-- ************************************************************************************************************-->
     <div class="mySlides fade">
-        <div class="numbertext">8 / 11</div>
+        <!-- <div class="numbertext">8 / 11</div> -->
         <?php 
             $link = get_field('video8_caption');
             $img = get_field('pic8-slider');
@@ -622,7 +675,7 @@ img {
 <!-- ************************************************************************************************************-->
 
  <div class="mySlides fade">
-        <div class="numbertext">9 / 11</div>
+        <!-- <div class="numbertext">9 / 11</div> -->
         <?php 
             $link = get_field('video9_caption');
             $img = get_field('pic9-slider');
@@ -642,7 +695,7 @@ img {
 
 <!-- ************************************************************************************************************-->
     <div class="mySlides fade">
-        <div class="numbertext">10 / 11</div>
+        <!-- <div class="numbertext">10 / 11</div> -->
         <?php 
             $link = get_field('video10_caption');
             $img = get_field('pic10-slider');
@@ -662,7 +715,7 @@ img {
 <!-- ************************************************************************************************************-->
 
  <div class="mySlides fade">
-        <div class="numbertext">11 / 11</div>
+        <!-- <div class="numbertext">11 / 11</div> -->
         <?php 
             $link = get_field('video11_caption');
             $img = get_field('pic11-slider');
@@ -893,7 +946,7 @@ function reset(){
 
 var slideIndex = 1;
 showDivs(slideIndex);
-showSlides(slideIndex);
+// showSlides(slideIndex);
 
 function plusDivs(n) {
   showDivs(slideIndex += n);

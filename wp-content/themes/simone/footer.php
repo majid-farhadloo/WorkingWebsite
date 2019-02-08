@@ -30,9 +30,10 @@
 				'<a href="http://mor10.com/" rel="designer nofollow">' . esc_attr__( 'mor10.com', 'simone' ) . '</a>' ); ?>
             </div> -->
             <!-- .site-info -->
-            <button style="float: right; background-color: #999; padding: 1.1rem;" onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+            <a href="#primary"><button style="float: right; background-color: #999; padding: 1.1rem;" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button></a>
 
-            
+             <!-- onclick="topFunction()" -->
+
     </footer>
     <!-- #colophon -->
     </div>
@@ -44,21 +45,18 @@
 
         </html>
 
-<script>
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("myBtn").style.display = "block";
-  } else {
-    document.getElementById("myBtn").style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function () {
+     $(".model-links").click(function () {
+     $(".model-links").removeClass("model-highlight");
+     $(this).addClass("model-highlight");
+    });
+   });
+   
+   $("a[href='#primary']").click(function() {
+   $("html, body").animate({ scrollTop: 0 }, "slow");
+   return false;
+   });
 </script>
