@@ -56,7 +56,7 @@
    });
    
    $("a[href='#primary']").click(function() {
-   $("html, body").animate({ scrollTop: 0 }, "slow");
+   $("html, body").animate({ scrollTop: 0 }, "slow"); 
    return false;
    });
 </script>

@@ -96,35 +96,37 @@ img {
 .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: -4%;
     width: auto;
-    padding: 20px 18px;
-    margin-top: -22px;
-    color: black;
+    padding: 10px 18px;
+    /*margin-top: -22px;*/
+    /*color: black;*/
+    letter-spacing: 2px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 15px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
-    margin-left: -10.5vw;
+    margin-left: 5.5vw;
     user-select: none;
 }
+
 
 
 /* Position the "next button" to the right */
 
 .next {
-    right: 1;
-    border-radius: 3px 0 0 3px;
+    right:1;
+    border-radius: 3px 0 3px 3px;
 }
 
 
 /* On hover, add a black background color with a little bit see-through */
 
-.prev:hover,
+/*.prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-
+*/
 
 /* Caption text */
 
@@ -238,29 +240,30 @@ img {
 
 .w3-position {
     /*margin: auto;*/
-    margin-left: 20vw;
+    margin-left: 17vw;
 
 }
 
-.w3-black:hover {
+
+/*.w3-position .w3-black:hover {
     color: lightblue!important;
-    background-color: #999!important
-}
+    background-color: red!important;
+}*/
 
 .w3-button {
     border: none;
     display: inline-block;
-    padding: 20px 25px;
+    padding: 20px 35px;
     vertical-align: middle;
     overflow: hidden;
     text-decoration: none;
-    color: inherit;
+    color: #453;
     background-color: transparent;
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
     font-size: 2rem;
-    margin-left: -1.5vw;
+    margin-left: -.5vw;
 }
 
 .w3-button {
@@ -393,7 +396,7 @@ img {
 #video1 img {
     height: 450px;
     width: 400px;
-    border-radius: 50%;
+    border-radius: 20%;
     padding: 2.5rem;
     margin-top: 1vh;
 }
