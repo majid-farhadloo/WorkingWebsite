@@ -5,20 +5,43 @@
 */
 
 get_header();
-?> <style type="text/css"> #primary {
+?> 
+
+
+<style type="text/css">
+
+
+
+ #primary {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 250, 220, 0.7));
 }
+
+
+@media screen and (max-width: 1539px) and (min-width: 1160px) {
+    .content-area-lander-page{
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 575px) {
+    .content-area-lander-page {
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
 
 body{
 	font-family: Lato;
 }
 
 #post {
-    width: 50%;
+    width: 80%;
     margin: auto;
     font-size: 1.75rem;
     text-align: justify;
-    margin-top: 2vh;
+    margin-top: 0vh;
 }
 
 #post a {
@@ -46,20 +69,20 @@ body{
 }
 
 .img {
-    margin: auto;
-    margin-left: 17vw;
+    /*margin: auto;*/
+    margin-left: 30vw;
 }
 
 #share-this {
     margin: auto;
-    margin-top: 2vh;
+    margin-top: 0vh;
     width: 75%;
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
     #post {
         font-size: 1.5rem;
-        text-align: center;
+        text-align: justify;
     }
     .img {
         width: 100%;
@@ -84,52 +107,20 @@ body{
         text-align: justify;
         line-height: 2.95rem;
     }
-    .featureImg.wp-post-image {
+   .featureImg.wp-post-image {
         width: 65%;
-        margin-left: -22vw;
+        margin-left: -5vw;
     }
-    .wp-post-image {
+
+  /*  .wp-post-image {
         width: 65%;
-        margin-left: -22vw;
-    }
+        margin-left: 0vw;
+    }*/
     #sharethis {
         width: 50%;
         margin: auto;
     }
-   
-    /* div width, margins and float. */
-    #content_rel_posts {
-        width: 22%;
-        /* width of each article column. */
-        float: left;
-        margin: 5px 12px 5px 0;
-        padding: 0px;
-    }
-    /* style for article heading. */
-    #content_rel_posts p {
-        font-size: 0.9em;
-        line-height: 120%;
-        padding: 5px 0 0 0;
-        margin: 0px;
-    }
-    /* style for article heading link. */
-    #content_rel_posts a {
-        text-decoration: none;
-        color: #21759b;
-    }
-    /* style for thumbnail */
-    #content_rel_posts img {
-        /*float: none;*/
-      
-        display: block;
-        padding: 0px;
-        border-radius: 3px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-        height: auto;
-        /* Make images responsive. */
-        max-width: 100%;
-        /* Make images responsive. */
-    }
+}
 
     .feature-img{
     	  margin-left: -10vw;
@@ -153,15 +144,19 @@ body{
     }
     </style> 
 
-    <div style="margin: auto;"></div> <div id="primary" class="content-area"> <main id="main" class="site-main" role="main"> <?php get_header();?>
-    <?php if (have_posts()): while (have_posts()): the_post();
-    ?> <?php if (get_the_post_thumbnail()) {
+    <div style="margin: auto;"></div>
+    <div id="primary" class="content-area-lander-page">
+    <main id="main" class="site-main" role="main"> <?php get_header();?>
+    
+    <?php if (have_posts()): while (have_posts()): the_post();?> 
+        <?php if (get_the_post_thumbnail()) {
         echo "<div class= 'img'>";
         the_post_thumbnail('medium_large', array( 'class'=> 'featureImg'));
         // set_post_thumbnail_size( 600, 600, true);
         echo "</div>";
     }?> 
 
+    <br>
     <div id="share-this"><?php echo sharethis_inline_buttons();?></div>
     <div id="the_title"> <?php the_title();?></div>
     <div id="post"><?php the_content();?></div> 
@@ -173,7 +168,7 @@ body{
     $link = get_field('link');
     // echo "<a href='http://localhost/dariusassemi/author/".$author_name."'";
 
-    echo "<a href= 'http://localhost/dariusassemi/author/" . $author_name . "'>" . '<div id="author">' . 'Written by ' . $author_name . "</a>" . ", " . $date. '</div>';?>
+    echo "<a href= '/dariusassemi/author/" . $author_name . "'>" . '<div id="author">' . 'Written by ' . $author_name . "</a>" . ", " . $date. '</div>';?>
 
     <?php 
     $link = get_field('link');
@@ -220,7 +215,7 @@ body{
         list-style: none;
     }
     .wp-post-image {
-        margin-left: 15vw;
+        /*margin-left: 15vw;*/
         padding: 2rem;
     }
     .relatedthumb {
