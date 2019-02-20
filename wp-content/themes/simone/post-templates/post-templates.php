@@ -13,7 +13,7 @@ get_header();
 
 
  #primary {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 250, 220, 0.7));
+    background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(75, 127, 168,0.2));
 }
 
 

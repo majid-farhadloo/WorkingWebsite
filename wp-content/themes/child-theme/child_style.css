@@ -40,50 +40,6 @@ body {
   
 }
 
-/* #3 Display section*/
-/*
-.info1, .info2 {
-  padding: 40px;
-  color: #000;
-}
-
-section .info1{
-  background:linear-gradient(0deg,rgba(255,255,255,0.4),rgba(0,0,0,0.4));
-  /*background-color: white;*/
-  /*height: 750px;*/
-  
-/*}*/
-
-/* make image on the same size*/
-/*.home-image{
-  width: 500px;
-  height: 500px;
-*/
-/*}*/
-
-
-/* #video-desc, #op_eds_desc{
-  font-size:  1.75rem;
-  color: rgba(0,0,0,0.7);
-  padding: 2rem;
-  line-height: 2rem;
- }
-
-
-#websites_section{
-  height: 525px;
-}
-
-
-#websites_section button{
-  width: 100%;
-  margin: 2rem 2rem 2rem 0rem;
-  padding: 4rem 4rem;
-  text-indent: center;
-  height: 120px;
-
-}*/
-
 
 /*Responsive*/
 
@@ -179,6 +135,23 @@ section .info1{
   padding: 2rem;
   color: #123;
 }
+
+
+#video .caption{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.75rem;
+    /* padding around text */
+    /*color: red;*/
+    font-size: 1.75rem;
+    text-align: center;
+    width: 100%;
+    margin-left: -4.5vw;
+}
+
+
 
 /*#videos{
   height: 30vh;
@@ -317,7 +290,8 @@ padding: 2px;
   margin-top: 2rem;
   margin-bottom: 2rem;
   cursor: pointer;
-  background: $primaryColour;
+  /*background: $primaryColour;*/
+  background-color: rgb(75, 127, 168);
   text-decoration: none;
   color: $secondaryColour;
 }
@@ -434,6 +408,8 @@ padding: 2px;
 @media screen and (min-width: 320px) and (max-width: 580px) {
   
 
+
+
     .bordered-title .title{
       font-size: 0.5rem;
     }
@@ -449,11 +425,18 @@ padding: 2px;
         height: 100%;
     }
 
+    .videos-section li{
+      padding: 2rem;
+      margin-bottom: 2rem;
+      margin-left: -14vw;
+    }
+
+
 
     .websites-section li{
-      padding: 2px;
+      padding: 3.5rem;
       margin-bottom: 2rem;
-      margin-left: -10vw;
+      margin-left: -14vw;
     }
 
     .button-style{

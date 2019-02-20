@@ -64,7 +64,8 @@ get_header(); ?>
   
   #primary {
       /*background:linear-gradient(0deg,rgba(255,255,255,0.8),rgba(10,10,10,0.7));*/
-      background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 250, 220, 0.7));
+      /*background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 250, 220, 0.7));*/
+      background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(75, 127, 168,0.2));
   } 
  
   * {
@@ -126,7 +127,8 @@ get_header(); ?>
       width: 50%;
       margin: auto;
       margin-left: -6vw;
-      background-color: #123;
+      /*background-color: #123;*/
+          background: rgb(75, 127, 168);
       height: 5px;
       padding: 2px;
 

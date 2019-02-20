@@ -222,7 +222,8 @@ img {
     margin:auto;
     margin-top: 4vh;
     margin-bottom: 2rem;
-    background-color: #123;
+    /*background-color: #123;*/
+    background: rgb(75, 127, 168);
     height: 5px;
     padding: 2px;
 }
@@ -235,7 +236,8 @@ img {
     margin: auto;
     margin-top: 4vh;
     margin-bottom: 2rem;
-    background-color: #123;
+    /*background-color: #123;*/
+    background: rgb(75, 127, 168);
     height: 5px;
     padding: 2px;
 }
@@ -247,7 +249,7 @@ img {
     /*margin: auto;*/
     /*margin-left: 18vw;*/
     margin: auto;
-    margin-left: 17.5vw;
+    margin-left: 18.5vw;
 
 }
 
@@ -272,6 +274,12 @@ img {
     font-size: 2rem;
     margin-left: -.5vw;
 }
+
+.w3-button:hover{
+
+    background: rgb(75, 127, 168);
+}
+
 
 .w3-button {
     -webkit-touch-callout: none;
@@ -304,20 +312,21 @@ img {
 
 @media screen and (min-width: 320px) and (max-width: 580px) {
     .title {
-        font-size: 2.5rem;
+        font-size: 2.0rem;
         text-align: center;
+        padding: 1.5rem;
     }
     #preview img {
         width: 100%;
         height: 300px;
-        margin-left: -3vw;
+        /*margin-left: 0vw;*/
     }
     #divider {
         /*margin: auto;*/
         margin-left: 25vw;
     }
     .w3-position {
-        margin-left: 30.5vw;
+        margin-left: 15.5vw;
     }
 }
 
@@ -397,7 +406,10 @@ img {
     }
 }
 
+.mySlides div iframe{
 
+    margin-left: 6vw;
+}
 
 /***************************** Testmonila video section ****************************************/
 
@@ -557,7 +569,8 @@ img {
 
 
 .content-area-lander-page { 
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 250, 220, 0.7)), url('/dariusassemi/wp-content/uploads/2019/02/ina-soulis-227104-unsplash.jpg');
+    background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(75, 127, 168,0.2));
+     /*background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(75, 127, 168,0.2)), url('/dariusassemi/wp-content/uploads/2019/02/ina-soulis-227104-unsplash.jpg');*/
     background-size: cover;
     background-position: center;
     /*font-family: Lato;*/
@@ -574,10 +587,12 @@ img {
     <div class="title">A selection of recent public addresses and interviews.</div>
 
     <div class="slideshow-container" id="slideshow">  
+               <section>
         <div class="w3-position">
                 <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
                 <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
         </div>
+        </section>
         <br>
 
 <!-- ************************************************************************************************************-->      
@@ -589,7 +604,7 @@ img {
             $src = get_field('video_source1');
             if( $link ): ?>
             <div id="preview" onclick="this.nextSibling.style.display='block'; this.style.display='none'"><img src="<?php echo $img['url']; ?>" style="cursor:pointer" /></div><div style="display:none">
-                <iframe style="width: 670px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
+                <iframe style="width: 800px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
             </div>
 
             <hr id="divider">
@@ -609,7 +624,7 @@ img {
             $src = get_field('video_source2');
             if( $link ): ?>
             <div id="preview" onclick="this.nextSibling.style.display='block'; this.style.display='none'"><img src="<?php echo $img['url']; ?>" style="cursor:pointer" /></div><div style="display:none">
-                <iframe style="width: 670px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
+                <iframe style="width: 800px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
             </div>
 
             <hr id="divider">
@@ -629,7 +644,7 @@ img {
             $src = get_field('video_source3');
             if( $link ): ?>
             <div id="preview" onclick="this.nextSibling.style.display='block'; this.style.display='none'"><img src="<?php echo $img['url']; ?>" style="cursor:pointer" /></div><div style="display:none">
-                <iframe style="width: 670px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
+                <iframe style="width: 800px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
             </div>
 
             <hr id="divider">
@@ -649,7 +664,7 @@ img {
             $src = get_field('video_source4');
             if( $link ): ?>
             <div id="preview" onclick="this.nextSibling.style.display='block'; this.style.display='none'"><img src="<?php echo $img['url']; ?>" style="cursor:pointer" /></div><div style="display:none">
-                <iframe style="width: 670px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
+                <iframe style="width: 800px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
             </div>
 
             <hr id="divider">
@@ -669,7 +684,7 @@ img {
             $src = get_field('video_source5');
             if( $link ): ?>
             <div id="preview" onclick="this.nextSibling.style.display='block'; this.style.display='none'"><img src="<?php echo $img['url']; ?>" style="cursor:pointer" /></div><div style="display:none">
-                <iframe style="width: 670px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
+                <iframe style="width: 800px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
             </div>
 
             <hr id="divider">
@@ -689,7 +704,7 @@ img {
             $src = get_field('video_source6');
             if( $link ): ?>
             <div id="preview" onclick="this.nextSibling.style.display='block'; this.style.display='none'"><img src="<?php echo $img['url']; ?>" style="cursor:pointer" /></div><div style="display:none">
-                <iframe style="width: 670px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
+                <iframe style="width: 800px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
             </div>
 
             <hr id="divider">
@@ -710,7 +725,7 @@ img {
             $src = get_field('video_source7');
             if( $link ): ?>
             <div id="preview" onclick="this.nextSibling.style.display='block'; this.style.display='none'"><img src="<?php echo $img['url']; ?>" style="cursor:pointer" /></div><div style="display:none">
-                <iframe style="width: 670px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
+                <iframe style="width: 800px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
             </div>
 
             <hr id="divider">
@@ -730,7 +745,7 @@ img {
             $src = get_field('video_source8');
             if( $link ): ?>
             <div id="preview" onclick="this.nextSibling.style.display='block'; this.style.display='none'"><img src="<?php echo $img['url']; ?>" style="cursor:pointer" /></div><div style="display:none">
-                <iframe style="width: 670px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
+                <iframe style="width: 800px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
             </div>
 
             <hr id="divider">
@@ -750,7 +765,7 @@ img {
             $src = get_field('video_source9');
             if( $link ): ?>
             <div id="preview" onclick="this.nextSibling.style.display='block'; this.style.display='none'"><img src="<?php echo $img['url']; ?>" style="cursor:pointer" /></div><div style="display:none">
-                <iframe style="width: 670px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
+                <iframe style="width: 800px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
             </div>
 
             <hr id="divider">
@@ -770,7 +785,7 @@ img {
             $src = get_field('video_source10');
             if( $link ): ?>
             <div id="preview" onclick="this.nextSibling.style.display='block'; this.style.display='none'"><img src="<?php echo $img['url']; ?>" style="cursor:pointer" /></div><div style="display:none">
-                <iframe style="width: 670px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
+                <iframe style="width: 800px; height: 500px;" src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
             </div>
 
             <hr id="divider">
@@ -790,7 +805,7 @@ img {
             $src = get_field('video_source11');
             if( $link ): ?>
             <div id="preview" onclick="this.nextSibling.style.display='block'; this.style.display='none'"><img src="<?php echo $img['url']; ?>" style="cursor:pointer" /></div><div style="display:none">
-                <iframe style="width: 670px; height: 500px;"   src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
+                <iframe style="width: 800px; height: 500px;"   src="<?php echo $src; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myVideo"></iframe>
             </div>
 
             <hr id="divider">

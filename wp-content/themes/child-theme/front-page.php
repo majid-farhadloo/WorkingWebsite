@@ -96,6 +96,9 @@ get_header(); ?>
                             $image1 = get_field('video1-image');
                             $image2 = get_field('video2-image');
                             $image3 = get_field('video3-image');
+                            $cpation1 = get_field('video3-image');
+                            $caption2 = get_field('video3-image');
+                            $caption3 = get_field('video3-image');
                             ?>
 
                             <!-- <hr id="divider"> -->
@@ -106,6 +109,7 @@ get_header(); ?>
                                    
                                    <a href="<?php  the_field ('video1-url') ?>" data-toggle="lightbox">
                                         <img class="v-cover1 video-image img-fluid" style="border-radius: 20%; width:400px; height:400px;" src="<?php echo $image1['url']; ?>" alt="<?php echo $image1['alt']; ?>"/>
+                                        <p class="caption"><?php the_field('video_caption1'); ?></p>
                                     </a>
             
 
@@ -115,6 +119,7 @@ get_header(); ?>
                                     <br>
                                     <a href="<?php  the_field ('video2-url') ?>" data-toggle="lightbox">
                                         <img class="v-cover1 video-image img-fluid" style="border-radius: 20%; width:400px; height:400px;" src="<?php echo $image2['url']; ?>" alt="<?php echo $image1['alt']; ?>"/>
+                                        <p class="caption"><?php the_field('video_caption2'); ?></p>
                                     </a>
 
                                 </li>
@@ -123,6 +128,7 @@ get_header(); ?>
                                     <br>
                                     <a href="<?php  the_field ('video3-url') ?>" data-toggle="lightbox">
                                         <img class="v-cover1 video-image img-fluid" style="border-radius: 20%; width:400px; height:400px;" src="<?php echo $image3['url']; ?>" alt="<?php echo $image1['alt']; ?>"/>
+                                       <p class="caption"><?php the_field('video_caption3'); ?></p>
                                     </a>
                                 </li>
 

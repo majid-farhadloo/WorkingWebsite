@@ -30,7 +30,7 @@
 				'<a href="http://mor10.com/" rel="designer nofollow">' . esc_attr__( 'mor10.com', 'simone' ) . '</a>' ); ?>
             </div> -->
             <!-- .site-info -->
-            <a href="#primary"><button style="float: right; background-color: #999; padding: 1.1rem;" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button></a>
+            <a href="#primary"><button style="float: right; background-color:rgba(90, 180, 168,0.5);; padding: 1.1rem;" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button></a>
 
              <!-- onclick="topFunction()" -->
 

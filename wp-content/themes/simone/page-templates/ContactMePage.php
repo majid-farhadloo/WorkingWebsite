@@ -9,12 +9,12 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 
-			<p id="title"> Contact Page</p>
+			<p id="title"> Contact Form</p>
 
 				<hr id="divider">
 
 			<div id="form">
-                <?php echo do_shortcode('[contact-form-7 id="348" title="Contact form 1"]'); ?>
+                <?php echo do_shortcode('[contact-form-7 id="348" title="Contact form"]'); ?>
             </div>
 
               <div class="social">
@@ -47,7 +47,7 @@ get_header(); ?>
 
 
 .content-area-lander-page {	
-	background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 250, 220, 0.7)), url('<?php echo $image['url'] ?>');
+	 background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(75, 127, 168,0.2)), url('<?php echo $image['url'] ?>');
     background-size: cover;
     background-position: center;
     font-family: Lato;
@@ -82,6 +82,7 @@ get_header(); ?>
     text-align: center;
     font-family: Lato;
     font-weight: bold;
+    /*color: rgba(255,255,255,0.9);*/
 }
 
 #form {
@@ -99,7 +100,7 @@ get_header(); ?>
     margin: auto;
     margin-top: 4vh;
     margin-bottom: 2rem;
-    background-color: #123;
+    background-color: rgb(75, 127, 168);
     height: 5px;
     padding: 2px;
     margin-top: -5.5vh;
@@ -107,8 +108,8 @@ get_header(); ?>
 
 
 .wpcf7 {
-    background: rgba(0, 0, 0, 0.3);
-    border: 5px solid #494949;
+    background: rgba(75, 127, 168,0.28);
+    border: 5px solid rgba(75, 127, 168,0.6);
     width: 700px;
     padding: 20px 20px 20px 50px !important;
 }
@@ -136,7 +137,7 @@ textarea {
     color: #ffffff;
     font-size: 18px;
     font-weight: 700;
-    background: #E2272E;
+    background: rgb(75, 127, 168);
     padding: 15px 25px 15px 25px;
     border: none;
     border-radius: 5px;
@@ -189,7 +190,7 @@ span.wpcf7-list-item {
     font-size: 30px;
     padding: 4px 5px;
     margin-left: -20px;
-    color: black;
+    color: rgb(80, 168, 225);
     transition: all 0.5s;
 }
 

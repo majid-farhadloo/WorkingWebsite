@@ -46,7 +46,7 @@ get_header(); ?>
                     if(strlen($content)<500+10) echo mb_strimwidth($content, 0, 650, '<br><span><a href="' . get_permalink() . '">[Read more]</a></span>');
                     $break_pos = strpos($content, ' ', 650);//find next space after desired length
                     $visible = substr($content, 0, $break_pos);
-                    echo balanceTags($visible) . ' ... <br><span><a href="' . get_permalink() . '"><button style="margin:1.5rem; color:lightblue;">Read More</button></a></span>';
+                    echo balanceTags($visible) . ' ... <br><span><a href="' . get_permalink() . '"><button style="margin:1.5rem; color:white;  background: rgb(75, 127, 168);">Read More</button></a></span>';
 
                     echo "<hr id='divider'>";
 					echo '</div>';
@@ -75,7 +75,7 @@ get_header(); ?>
 
 
 .content-area-lander-page{
-	 background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(255,250,220,0.7)),url('<?php echo $image['url'] ?>');
+	 background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(75, 127, 168,0.35)),url('<?php echo $image['url'] ?>');
 	 /*background-image: url(' ');*/
   	 background-size:auto;
   	 background-position: right -30px;
@@ -116,7 +116,7 @@ get_header(); ?>
          width: 100%;
          text-align: center;
          height: 5px;
-         background-color: rgba(55,50,1,0.7);
+         background: rgb(75, 127, 168);
          color: #123;
          margin-top: 15px;
          margin-bottom: 15px;

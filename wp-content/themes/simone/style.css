@@ -301,8 +301,10 @@ input[type="submit"] {
     text-transform: uppercase;
     line-height: 1;
     color: hsl(0, 0%, 100%);
-    background: #3c3c3c;
-    background: hsl(0, 0%, 24%);
+/*    background: #3c3c3c;
+    background: hsl(0, 0%, 24%);*/
+    
+    background: rgb(75, 127, 168);
     border: none;
     border-radius: 3px;
     cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
@@ -422,8 +424,9 @@ a:active {
     clear: both;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
-    background: #313131;
-    background: hsl(0, 0%, 19%);
+    /*background: #313131;*/
+    /*background: hsl(0, 0%, 19%);*/
+    background: rgb(75, 127, 168);
 }
 
 .main-navigation ul {
@@ -455,8 +458,9 @@ a:active {
     display: none;
     float: left;
     padding: 0;
-    background: #4d4d4d;
-    background: hsl(0, 0%, 30%);
+    /*background: #4d4d4d;*/
+    /*background: hsl(0, 0%, 30%);*/
+    background: rgb(75, 127, 168);
 }
 
 .main-navigation ul ul ul {
@@ -472,16 +476,18 @@ a:active {
 .main-navigation li > a:focus {
     color: #fff;
     color: hsl(0, 0%, 100%);
-    background: #4d4d4d;
-    background: hsl(0, 0%, 30%);
+    /*background: #4d4d4d;*/
+    /*background: hsl(0, 0%, 30%);*/
+    background: rgb(75, 127, 168);
 }
 
 .main-navigation ul ul :hover > a { }
 
 .main-navigation ul ul a:hover,
 .main-navigation ul ul a:focus {
-    background: #313131;
-    background: hsl(0, 0%, 19%);
+    /*background: #313131;*/
+    /*background: hsl(0, 0%, 19%);*/
+    background: rgb(30, 150, 168);
 }
 
 .main-navigation ul li:hover > ul { display: block; }
@@ -492,22 +498,26 @@ a:active {
 .main-navigation .current-menu-item > a:hover,
 .main-navigation .current_page_item > a:focus,
 .main-navigation .current-menu-item > a:focus {
-    color: #313131;
-    color: hsl(0, 0%, 19%);
-    background: white;
+   /* color: #313131;
+    color: hsl(0, 0%, 19%);*/
+    /*background: rgba(75, 127, 168,0.5);*/
+    background: rgba(30, 150, 168,0.4);
+    /*background: white;*/
 }
 
 .main-navigation .current_page_ancestor {
-    background: #4d4d4d;
-    background: hsl(0, 0%, 30%);
+    /*background: #4d4d4d;
+    background: hsl(0, 0%, 30%);*/
+    background: rgb(75, 127, 168);
 }
 
 .main-navigation ul ul .current_page_parent,
 .main-navigation .current_page_parent .current_page_item > a {
     color: #fff;
     color: hsl(0, 0%, 100%);
-    background: #313131;
-    background: hsl(0, 0%, 19%);
+   /* background: #313131;
+    background: hsl(0, 0%, 19%);*/
+    background: rgba(30, 150, 168,0.4);
 }
 
 /* Small menu */
@@ -531,8 +541,9 @@ a:active {
 
     .menu-toggle a:hover,
     .menu-toggle a:focus {
-        background: #4d4d4d;
-    background: hsl(0, 0%, 30%);
+      /*  background: #4d4d4d;
+    background: hsl(0, 0%, 30%);*/
+    background: rgb(75, 127, 168);
     }
 
     .main-navigation.toggled .nav-menu {
@@ -557,8 +568,9 @@ a:active {
 
     .main-navigation li:hover > a,
     .main-navigation li > a:focus {
-        background: #313131;
-        background: hsl(0, 0%, 19%);
+        /*background: #313131;
+        background: hsl(0, 0%, 19%);*/
+        background: rgba(30, 150, 168,0.4);
     }
 
     .main-navigation ul ul,
@@ -568,8 +580,9 @@ a:active {
         left: 0;
         display: block;
         float: none;
-        background: #313131;
-        background: hsl(0, 0%, 19%);
+      /*  background: #313131;
+        background: hsl(0, 0%, 19%);*/
+         background: rgba(75, 127, 168,0.5);
     }
 
     .main-navigation ul ul a { width: 100%; }
@@ -578,8 +591,9 @@ a:active {
     .main-navigation ul ul a:hover,
     .main-navigation ul a:focus,
     .main-navigation ul ul a:focus{
-        background: #4d4d4d;
-        background: hsl(0, 0%, 30%);
+/*        background: #4d4d4d;
+        background: hsl(0, 0%, 30%);*/
+         background: rgb(75, 127, 168);
     }
 
     .main-navigation .current_page_ancestor { background: inherit; }
@@ -597,8 +611,9 @@ a:active {
     .main-navigation .current_page_parent .current_page_item > a  {
         color: #fff;
         color: hsl(0, 0%, 100%);
-        background: #4d4d4d;
-        background: hsl(0, 0%, 30%);
+        /*background: #4d4d4d;
+        background: hsl(0, 0%, 30%);*/
+        background: rgb(75, 127, 168);
     }
 
 } /* End responsive menu */
@@ -927,7 +942,8 @@ a:focus.page-numbers{
 }
 
 .header-background-image .title-box {
-    background: #333;
+    /*background: #333;*/
+    background: rgb(75, 127, 168);
     background: hsla(0, 0%, 0%, .7);
 }
 
@@ -962,8 +978,9 @@ a:focus.page-numbers{
 
 .search-toggle:hover,
 .search-toggle.active {
-    background: #4d4d4d;
-    background: hsl(0, 0%, 30%);
+    /*background: #4d4d4d;*/
+    background: rgba(75, 127, 168,0.5);
+    /*background: hsl(0, 0%, 30%);*/
 }
 
 .search-toggle .screen-reader-text {
@@ -1818,8 +1835,9 @@ object { max-width: 100%; }
     font-family: 'Lato';
     color: #fff;
     color: hsl(0, 0%, 100%);
-    background: #313131;
-    background: hsl(0, 0%, 19%);
+    /*background: #313131;
+    background: hsl(0, 0%, 19%);*/
+    background: rgb(75, 127, 168);
 }
 
 .site-footer a {
