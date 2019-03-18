@@ -6,19 +6,15 @@
 
 get_header();
 ?> 
-
-
 <style type="text/css">
+/******************************************** layout responsive ***************************************************************/
 
-
-
- #primary {
-    background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(75, 127, 168,0.2));
+#primary {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(75, 127, 168, 0.2));
 }
 
-
 @media screen and (max-width: 1539px) and (min-width: 1160px) {
-    .content-area-lander-page{
+    .content-area-lander-page {
         margin-left: 0;
         padding-left: 0;
     }
@@ -32,9 +28,14 @@ get_header();
 }
 
 
-body{
-	font-family: Lato;
+/******************************************** font-family setting ***************************************************************/
+
+body {
+    font-family: Montserrat;
 }
+
+
+/******************************************** main setting ***************************************************************/
 
 #post {
     width: 80%;
@@ -79,6 +80,30 @@ body{
     width: 75%;
 }
 
+.feature-img {
+    margin-left: -10vw;
+    clear: both;
+}
+
+
+/* style for h2 heading tag */
+
+h2.heading_rel_posts {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.4em;
+    color: #666;
+}
+
+#source {
+    text-align: center;
+    padding: 2rem;
+    margin-left: 5vw;
+}
+
+
+/******************************************** page responsive components ***************************************************************/
+
 @media screen and (min-width: 320px) and (max-width: 600px) {
     #post {
         font-size: 1.5rem;
@@ -107,12 +132,11 @@ body{
         text-align: justify;
         line-height: 2.95rem;
     }
-   .featureImg.wp-post-image {
+    .featureImg.wp-post-image {
         width: 65%;
         margin-left: -5vw;
     }
-
-  /*  .wp-post-image {
+    /*  .wp-post-image {
         width: 65%;
         margin-left: 0vw;
     }*/
@@ -122,31 +146,17 @@ body{
     }
 }
 
-    .feature-img{
-    	  margin-left: -10vw;
-    	  clear: both;
-    }
-
-    /* style for h2 heading tag */
-    h2.heading_rel_posts {
-        padding: 0px;
-        margin: 0px;
-        font-size: 1.4em;
-        color: #666;
-    }
+</style>
 
 
-    #source{
-
-    	text-align: center;
-    	padding: 2rem;
-    	margin-left: 5vw;
-    }
-    </style> 
 
     <div style="margin: auto;"></div>
     <div id="primary" class="content-area-lander-page">
     <main id="main" class="site-main" role="main"> <?php get_header();?>
+
+   
+
+
     
     <?php if (have_posts()): while (have_posts()): the_post();?> 
         <?php if (get_the_post_thumbnail()) {
@@ -159,53 +169,59 @@ body{
     <br>
     <div id="share-this"><?php echo sharethis_inline_buttons();?></div>
     <div id="the_title"> <?php the_title();?></div>
-    <div id="post"><?php the_content();?></div> 
-    <!-- <div id="date"><?php echo get_the_date();?></div>  -->
+    <br>
 
-    <?php $date = get_the_date();  ?>
-    <?php $author= get_the_author();
+    <div class="post_info">
+    <?php $date = get_field('date');  ?>
+    <?php $author= get_field('author');
     $author_name= get_the_author_meta('display_name');
     $link = get_field('link');
     // echo "<a href='http://localhost/dariusassemi/author/".$author_name."'";
 
-    echo "<a href= '/dariusassemi/author/" . $author_name . "'>" . '<div id="author">' . 'Written by ' . $author_name . "</a>" . ", " . $date. '</div>';?>
+    echo '<div id="author">' . 'Written by: ' . $author . "</a>" . ", " . $date. '</div>';?>
+
+
+    <!-- echo "<a href= '/dariusassemi/author/" . $author_name . "'>" . '<div id="author">' . 'Written by ' . $author . "</a>" . ", " . $date. '</div>';?> -->
 
     <?php 
     $link = get_field('link');
     if( $link ): ?>
-	<a class="button" href="<?php echo $link; ?>"><div style="text-align: center;"> Source: <?php the_field('source'); ?></div></a>
-	<?php endif; ?>
+    <a class="button" href="<?php echo $link; ?>"><div style="text-align: center;"> Source: <?php the_field('source'); ?></div></a>
+    <?php endif; ?>
+    </div>
+    <br>
 
-
+    <div id="post"><?php the_content();?></div> 
+    <!-- <div id="date"><?php echo get_the_date();?></div>  -->
 
 	<?php endwhile;?> 
 	<?php endif;?>
 
-    <br/> 
-    <?php simone_post_nav();?>
+
     <?php // If comments are open or we have at least one comment, load up the comment template
     if (comments_open() || '0' !=get_comments_number()): comments_template();
     endif;?> 
+
+ 
+
     </main>
-    <!-- #main --> 
+    <!-- main -->
 	</div>
-    <!-- #primary --> 
+    <!-- #primary -->
     <?php get_footer();?>
 
 
 
-    
-<!--     echo " <div id= 'the_title'>Related Posts:</h2>";
-    echo "<br />";
-    echo "<div class='relatedposts'>";
-    dfw_related_posts();
-   	dfw_related_posts('tag');
-    echo "</div>";
-    echo "<a href= 'http://localhost/dariusassemi/authorpage'>".'<div id="author">'. 'Written by: '. $author_name . '</div>' . "</a>"
-    "<div id='author'>"."Written by:". $author_name ."</div>"."</a>";
- -->
+<!--    echo " <div id= 'the_title'>Related Posts:</h2>";
+        echo "<br />";
+        echo "<div class='relatedposts'>";
+        dfw_related_posts();
+       	dfw_related_posts('tag');
+        echo "</div>";
+        echo "<a href= 'http://localhost/dariusassemi/authorpage'>".'<div id="author">'. 'Written by: '. $author_name . '</div>' . "</a>"
+        "<div id='author'>"."Written by:". $author_name ."</div>"."</a>"; -->
 
-
+<!-- 
     <style type="text/css">
 
      #related-post {
@@ -237,4 +253,7 @@ body{
         background-color: #ddd;
         color: #000;
     }
-    </style>
+
+    </style> -->
+
+    <!-- if I need to have post navigation for hte different post in the same page (go to next, go to prev) simone_post_nav() -->

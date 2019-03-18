@@ -354,7 +354,7 @@ function related_posts_with_thumb($content)
     }
     return $content;
 }
-add_filter('the_content', 'related_posts_with_thumb', 2);
+// add_filter('the_content', 'related_posts_with_thumb', 2);
 
 
 

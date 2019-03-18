@@ -9,7 +9,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 
-			<p id="title"> Contact Form</p>
+			<p id="title" style="font-family:'Montserrat';">Contact Form</p>
 
 				<hr id="divider">
 
@@ -18,7 +18,7 @@ get_header(); ?>
             </div>
 
               <div class="social">
-            	<ul>
+            	<ul class="social_media">
 	              <li><a href="https://www.facebook.com/majid.farhadloo"><i class="fa fa-facebook"></i></a></li>
 	              <li><a href="https://www.instagram.com/majidcsci/"><i class="fa fa-instagram"></i></a></li>
 	              <li><a href="https://www.linkedin.com/in/majid-farhadloo-b68839113/"><i class="fa fa-linkedin"></i></a></li>
@@ -45,23 +45,31 @@ get_header(); ?>
 
 
 
+/******************************************** Font-Family-setup ***************************************************************/
 
-.content-area-lander-page {	
-	 background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(75, 127, 168,0.2)), url('<?php echo $image['url'] ?>');
-    background-size: cover;
-    background-position: center;
-    font-family: Lato;
-    height: 100%;  
+* {
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
 }
+
+body {
+    font-family: 'Montserrat';
+    margin: 0 auto;
+}
+
+
+/******************************************** background setting ***************************************************************/
 
 #primary {
-    height: auto;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 250, 220, 0.7)), url('<?php echo $image['url'] ?>');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(75, 127, 168, 0.2));
 }
 
-@media screen and (max-width: 1539px) and (min-width: 1160px) {
+
+/******************************************** responsive ***************************************************************/
+
+@media screen and (max-width: 1539px) and (min-width: 1160px) and (min-height: 1415px;
+) {
     .content-area.lander-page {
         margin-left: 0;
         padding-left: 0;
@@ -69,31 +77,34 @@ get_header(); ?>
 }
 
 @media screen and (max-width: 1539px) and (min-width: 1160px) {
-    #primary{
+    #primary {
         margin-left: 0;
         padding-left: 0;
     }
 }
 
 
+/******************************************** css setting ***************************************************************/
+
 #title {
     font-size: 3.5rem;
     padding: 2.5rem;
     text-align: center;
-    font-family: Lato;
+    font-family: Montserrat;
     font-weight: bold;
-    /*color: rgba(255,255,255,0.9);*/
+    /*margin: auto;*/
+    text-align: center;
 }
 
 #form {
     margin: auto;
-    margin-left: 31vw;
+    margin-left: 34vw;
     padding: 2%;
-    /*margin-top: -8vh;*/
-    font-family: Lato;
+    font-family: Montserrat;
 }
 
-/*hr divider */
+
+/******************************************** divider ***************************************************************/
 
 #divider {
     width: 40%;
@@ -106,17 +117,17 @@ get_header(); ?>
     margin-top: -5.5vh;
 }
 
-
 .wpcf7 {
-    background: rgba(75, 127, 168,0.28);
-    border: 5px solid rgba(75, 127, 168,0.6);
+    background: rgba(75, 127, 168, 0.28);
+    border: 5px solid rgba(75, 127, 168, 0.6);
     width: 700px;
     padding: 20px 20px 20px 50px !important;
+    height: auto;
+    width: 40%;
 }
 
 
-/* Contact Form 7 Input CSS 
----------------------------*/
+/******************************************** Contact Form 7 Input CSS  ***************************************************************/
 
 .wpcf7 input[type="text"],
 .wpcf7 input[type="email"],
@@ -130,8 +141,7 @@ textarea {
 }
 
 
-/* Contact Form 7 Submit Button 
--------------------------------*/
+/******************************************** Contact Form 7 Submit Button   ***************************************************************/
 
 .wpcf7 input[type="submit"] {
     color: #ffffff;
@@ -156,8 +166,7 @@ textarea {
 }
 
 
-/* Checkbox CSS
-----------------*/
+/******************************************** Checkbox CSS   ***************************************************************/
 
 input[type="checkbox"] {
     transform: scale(1.3);
@@ -170,13 +179,11 @@ span.wpcf7-list-item {
 }
 
 
-
-/* Social
-----------------*/
+/******************************************** social media icon   ***************************************************************/
 
 .social {
     margin-top: 50px;
-    margin-left: 42.5vw;
+    margin-left: 41vw;
     padding: 1%;
 }
 
@@ -199,82 +206,81 @@ span.wpcf7-list-item {
 }
 
 
-/* Mobile Friendly
-----------------*/
-
+/******************************************** Mobile Friendly  ***************************************************************/
 
 @media screen and (min-width: 320px) and (max-width: 580px) {
-    
-#form {
-
-    	margin:auto;
-    	padding: 5%;
-}
-
-.wpcf7 {
-    
-    width: 100%;
-}
-
-  .social{
-      margin-left: 14vw;
+    #form {
+        margin: auto;
+        padding: 5%;
     }
-
-
- .content-area-lander-page {
-    height: 100%;
- }    
-
+    .wpcf7 {
+        width: 100%;
+    }
+    .social {
+        margin-left: 14vw;
+    }
+    .content-area-lander-page {
+        height: 100%;
+    }
 }
-
-
 
 @media screen and (min-width: 491px) and (max-width: 768px) {
-
-
-	#form {
-
-    	margin:auto;
-    	padding: 5%;
-	}
-
-	.wpcf7 {
-    
-    width: 100%;	
-	}
-
-    .social{
-      margin-left: 36vw;
+    #form {
+        margin: auto;
+        padding: 5%;
     }
-
-
+    .wpcf7 {
+        width: 100%;
+    }
+    .social {
+        margin-left: 36vw;
+    }
     .content-area-lander-page {
-    height: 100%;
- 	}   
-
-   }
-
-
- @media screen and (min-width:767px) and (max-width:1150px) {
-
- 	#form {
-
-    	margin:auto;
-    	padding: 5%;
-	}
-
-	.wpcf7 {
-    
-    width: 100%;	
-	}
-
-      .social{
-      margin-left: 39vw;
-      }
-
-     .content-area-lander-page {
-    height: 100%;
- 	}
-
-
+        height: 100%;
     }
+}
+
+@media screen and (min-width:767px) and (max-width:1150px) {
+    #form {
+        margin: auto;
+        padding: 5%;
+    }
+    .wpcf7 {
+        width: 100%;
+    }
+    .social {
+        margin-left: 39vw;
+    }
+    .content-area-lander-page {
+        height: 100%;
+    }
+}
+
+
+/******************************************** Mobile Friendly with respect to the height  ***************************************************************/
+
+@media screen and (min-width: 600px)  and (min-height:1350px) {
+
+    #form{
+        height: 80vh;
+    }
+
+
+    #divider{
+        margin-top: 50px;
+    }
+
+
+    .social_media{
+
+        margin-top: -23vh;
+    }
+
+}
+
+
+
+
+
+
+</style>

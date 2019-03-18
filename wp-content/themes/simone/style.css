@@ -62,7 +62,7 @@ and Blueprint http://www.blueprintcss.org/
 
 
 body{
-    font-family: Lato;
+    font-family: Montserrat;
     /*height: 100%;*/
     /*background-size: cover;*/
 }
@@ -174,7 +174,7 @@ select,
 textarea {
     font-size: 18px;
     font-size: 1.8rem;
-    font-family: 'PT Serif', serif;
+    font-family: 'Montserrat', serif;
     line-height: 1.5;
     color: #404040;
     color: hsl(0, 0%, 25%);
@@ -182,7 +182,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #000;
     color: hsl(0, 0%, 0%);
     -ms-word-break: break-word;
@@ -202,7 +202,7 @@ pre {
     padding: 1.6em;
     margin-bottom: 2em!important;
     overflow: auto;
-    font-family: "Courier 10 Pitch", Courier, monospace;
+    font-family: Montserrat, "Courier 10 Pitch", Courier, monospace;
     font-size: 15px;
     font-size: 1.5rem;
     line-height: 1.6;
@@ -297,7 +297,7 @@ input[type="submit"] {
     padding: 1em 2em;
     font-size: 16px;
     font-size: 1.6rem;
-    font-family: 'Lato';
+    font-family: 'Montserrat';
     text-transform: uppercase;
     line-height: 1;
     color: hsl(0, 0%, 100%);
@@ -358,7 +358,7 @@ input[type="password"],
 input[type="search"],
 textarea {
     padding: 8px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #333;
     border: 1px solid #ccc;
 }
@@ -382,7 +382,7 @@ textarea {
 .comment-awaiting-moderation { /* Green background color to make moderation seem less aggressive */
     padding: .5rem 1rem;
     margin: 1rem 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-size: 1.6rem;
     color: #fff;
@@ -422,7 +422,7 @@ a:active {
     display: block;
     width: 100%;
     clear: both;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     /*background: #313131;*/
     /*background: hsl(0, 0%, 19%);*/
@@ -614,10 +614,10 @@ a:active {
         /*background: #4d4d4d;
         background: hsl(0, 0%, 30%);*/
         background: rgb(75, 127, 168);
-    }
+    
 
 } /* End responsive menu */
-
+}
 /*--------------------------------------------------------------
 5.3 Social Menu
 --------------------------------------------------------------*/
@@ -709,7 +709,7 @@ a:active {
 .site-main .post-navigation {
     font-size: 18px;
     font-size: 1.8rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #000;
     color: hsl(0, 0%, 0%);
 }
@@ -1027,7 +1027,7 @@ a:focus.page-numbers{
 --------------------------------------------------------------*/
 .widget {
     margin: 0 0 4em;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-size: 1.6rem;
 }
@@ -1066,7 +1066,7 @@ a:focus.page-numbers{
     float: left;
     padding-top: 2px;
     margin-left: -2.5em;
-    font-family: 'fontawesome';
+    font-family: 'Montserrat';
     font-size: 14px;
     font-size: 1.4rem;
 }
@@ -1322,7 +1322,7 @@ blockquote cite {
     display: block;
     margin-top: 1em;
     margin-left: 40%;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     line-height: 1.5em;
     text-align: right;
@@ -1370,7 +1370,7 @@ blockquote cite {
 /* Meta */
 .category-list {
     margin: 1.3em 0 1em;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-size: 1.6rem;
 }
@@ -1389,7 +1389,7 @@ blockquote cite {
 .entry-meta {
     margin-bottom: 2rem;
     padding: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-size: 1.4rem;
 }
@@ -1427,7 +1427,7 @@ blockquote cite {
 .entry-footer {
     margin-top: 3rem;
     margin-bottom: 5rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .entry-footer ul {
@@ -1452,7 +1452,7 @@ blockquote cite {
 .taxonomy-description {
     padding-top: 2rem;
     margin: 2rem 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: italic;
     border-top: 1px solid hsl(0, 0%, 75%);
     border-bottom: 1px solid hsl(0, 0%, 75%);
@@ -1492,7 +1492,7 @@ blockquote cite {
 .attachment-caption {
     font-size: 14px;
     font-size: 1.4rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -1523,7 +1523,7 @@ ol.children { list-style-type: none; }
 
 .comment-author .fn {
     font-weight: 900;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserratf', sans-serif;
     font-size: 20px;
     font-size: 2rem;
 }
@@ -1554,7 +1554,7 @@ ol.children { list-style-type: none; }
     font-weight: 600;
     font-size: 14px;
     font-size: 1.4rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .comment-content ol { margin-left: 1.5em; }
@@ -1582,17 +1582,18 @@ ol.children { list-style-type: none; }
     font-weight: 900;
     font-size: 30px;
     font-size: 3rem;
+    font-family: Montserrat, sans-serif;
 }
 
 .comment-form {
     padding-bottom: 4rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-size: 1.6rem;
 }
 
 .comment-form textarea {
-    font-family: 'PT Serif', serif;
+    font-family: Montserrat, 'PT Serif', serif;
     font-size: 18px;
     font-size: 1.8rem;
 }
@@ -1660,7 +1661,7 @@ ol.children { list-style-type: none; }
 .author-meta {
     border-bottom: 16px solid hsl(0, 0%, 95%);
     margin-bottom: 2rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .share-and-more {
@@ -1683,7 +1684,7 @@ ol.children { list-style-type: none; }
 
 a.author-link {
     font-weight: 900;
-    font-family: 'Lato', sans-serif;
+    font-family: sans-serif;
     color: #000;
     color: hsl(0, 0%, 0%);
 }
@@ -1741,7 +1742,7 @@ a.author-link {
     padding: 0.8075em 1em;
     font-size: 14px;
     font-size: 1.4rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: #e5e5e5;
     background: hsl(0, 0%, 90%);
 }
@@ -1832,7 +1833,7 @@ object { max-width: 100%; }
     padding: 1em;
     font-size: 16px;
     font-size: 1.6rem;
-    font-family: 'Lato';
+    font-family: 'Montserrat';
     color: #fff;
     color: hsl(0, 0%, 100%);
     /*background: #313131;

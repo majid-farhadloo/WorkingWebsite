@@ -5,8 +5,10 @@
  * @package Simone
  */
 
-get_header(); ?>
 
+
+get_header(); ?>
+    
     <div id="primary" class="content-area lander-page">
         <main id="main" class="site-main" role="main">
 
@@ -21,8 +23,6 @@ get_header(); ?>
             </section>
 
 
-
-
             <!-- *********************************************** OP-EDS ******************************* -->
             <section id="testimonials">
                 <div class="indent clear">
@@ -31,29 +31,26 @@ get_header(); ?>
                     </section>
                         <!-- <hr id="divider"> -->
                         <br>
-                        <?php 
-                                $args = array(
-                                    'posts_per_page' => 3,
-                                    'orderby' => 'date'
-                                    // 'category_name' => 'testimonials'
-                                );
 
-                                $query = new WP_Query( $args );
-                                // The Loop
-                                if ( $query->have_posts() ) {
-                                    echo '<ul class="testimonials">';
-                                    while ( $query->have_posts() ) {
-                                        $query->the_post();
-                                        echo '<li class="clear">';
-                                        // echo '<figure class="testimonial-thumb">';
-                                        // if ( get_the_post_thumbnail() ) {
-                                        //  the_post_thumbnail( "full", array("class" => "testimonial-img") );
-                                        // } else {
-                                        // echo '<img src="http://localhost/dariusassemi/wp-content/uploads/2018/11/clever-visuals-712887-unsplash-1.jpg">';
-                                        // }
-                                        // // the_post_thumbnail('testimonial-mug');
-                                        // echo '</figure>';
-                                        echo '<aside class="testimonial-text">';
+                         <?php 
+
+                            // query
+                            $the_query = new WP_Query(array(
+                                // 'post_type'         => 'event',
+                                'posts_per_page'    => 3,
+                                // 'meta_key'          => 'featured',
+                                'meta_key'          => 'date',
+                                'orderby'           => 'meta_value'
+                                // 'order'             => 'DESC'
+                            ));
+
+                                if( $the_query->have_posts() ){
+                                 echo '<ul class="testimonials">';
+
+                                 while( $the_query->have_posts() ) {
+                                $the_query->the_post();
+                                 echo '<li class="clear">';
+                                 echo '<aside class="testimonial-text">';
                                         // echo '<h3 class="testimonial-name">' . get_the_title() . '</h3>';
                                         echo '<div class="testimonial-excerpt">';
                                         // the_content('');
@@ -61,19 +58,19 @@ get_header(); ?>
                                          echo '<div class="testimonial-content">'; 
                                         if(strlen($content)<300+10) echo mb_strimwidth($content, 0, 350, '<br><span><a href="' . get_permalink() . '">[Read more]</a></span>');
                                         $break_pos = strpos($content, ' ', 380);//find next space after desired length
-                                        $visible = substr($content, 0, $break_pos);
+                                        $visible = substr($content, 0, $break_pos);   
+                                        // $date = get_field('date') ? 'class="date"' : '';
+                                        $class = get_field('featured') ? 'class="featured"' : '';
                                         echo '</div>'; 
-                                        echo balanceTags($visible) . ' ... <br><span><a style ="font-size:2rem; padding:1.5rem; color:#188;" href="' . get_permalink() . '">Read More ...</a></span>';
+                                        echo balanceTags($visible) . ' ... <br><span><a style ="font-size:1.5rem; padding:1.5rem; color:#188;" href="' . get_permalink() . '">Read More ...</a></span>';
                                         echo '</div>';
                                         echo '</aside>';
                                         echo '</li>';
                                     }
                                     echo '</ul>';
                                 }
+                                wp_reset_postdata(); ?>
 
-                                /* Restore original Post Data */
-                                wp_reset_postdata();
-                                ?>
 
                                 <a rel="pulse" class="button" href="/dariusassemi/post/">
                                     <button class="button-style pulse">View All</button>
@@ -85,70 +82,66 @@ get_header(); ?>
             <br>
 
               <!-- *********************************************** videos ******************************* -->
-
             <section id="videos">
                 <div class="indent clear">
                     <section class="bordered-title">
                     <div class="title">Videos</</div>
                     </section>
                     <br>
-                        <?php
-                            $image1 = get_field('video1-image');
-                            $image2 = get_field('video2-image');
-                            $image3 = get_field('video3-image');
-                            $cpation1 = get_field('video3-image');
-                            $caption2 = get_field('video3-image');
-                            $caption3 = get_field('video3-image');
-                            ?>
+                    <div class="row">
+                          <div class="col-6">
+                            <div id="video1">
+                                 <?php 
+                                    $image = get_field('video1-image');
+                                    if( !empty($image) ): ?>
+                                        <a href="<?php the_field ('video1-url') ?>"><button id="bgTumbnailVideo" style="background-image: url('<?php echo $image['url']; ?>');"></button>
+                                        <div  class="videocaption">
+                                        <p>​<?php the_field ('video_caption1') ?></p>
+                                        </div>
+                                        </a>    
+                                    <?php endif; ?> 
+                            </div>
 
-                            <!-- <hr id="divider"> -->
+                            <div id="video1">
+                                 <?php 
+                                    $image = get_field('video2-image');
+                                    // $link = get_field('video1_caption');
+                                    if( !empty($image) ): ?>
+                                        <a href="<?php the_field ('video2-url') ?>"><button id="bgTumbnailVideo" style="background-image: url('<?php echo $image['url']; ?>');"></button>
+                                        <div  class="videocaption">    
+                                        <p>​<?php the_field ('video_caption2') ?></p></a>
+                                        </div>    
+                                    <?php endif; ?> 
+                            </div>
 
-                            <ul class="videos-section">
-                                <li id="video">
-                                    <br>
-                                   
-                                   <a href="<?php  the_field ('video1-url') ?>" data-toggle="lightbox">
-                                        <img class="v-cover1 video-image img-fluid" style="border-radius: 20%; width:400px; height:400px;" src="<?php echo $image1['url']; ?>" alt="<?php echo $image1['alt']; ?>"/>
-                                        <p class="caption"><?php the_field('video_caption1'); ?></p>
-                                    </a>
-            
+                            <div id="video1">
+                                 <?php 
+                                    $image = get_field('video3-image');
+                                    // $link = get_field('video1_caption');
+                                    if( !empty($image) ): ?>
+                                        <a href="<?php the_field ('video3-url') ?>"><button class="video_three" id="bgTumbnailVideo" style="background-image: url('<?php echo $image['url']; ?>');"></button>
+                                        <div  class="videocaption">
+                                        <p>​<?php the_field ('video_caption3') ?></p>
+                                        </div>
+                                        </a>    
+                                    <?php endif; ?> 
+                            </div>
 
-                                </li>
 
-                                <li id="video">
-                                    <br>
-                                    <a href="<?php  the_field ('video2-url') ?>" data-toggle="lightbox">
-                                        <img class="v-cover1 video-image img-fluid" style="border-radius: 20%; width:400px; height:400px;" src="<?php echo $image2['url']; ?>" alt="<?php echo $image1['alt']; ?>"/>
-                                        <p class="caption"><?php the_field('video_caption2'); ?></p>
-                                    </a>
-
-                                </li>
-
-                                <li id="video">
-                                    <br>
-                                    <a href="<?php  the_field ('video3-url') ?>" data-toggle="lightbox">
-                                        <img class="v-cover1 video-image img-fluid" style="border-radius: 20%; width:400px; height:400px;" src="<?php echo $image3['url']; ?>" alt="<?php echo $image1['alt']; ?>"/>
-                                       <p class="caption"><?php the_field('video_caption3'); ?></p>
-                                    </a>
-                                </li>
-
-                            </ul>
-
-                            <!-- <div>
-                                <a rel="pulse" class="button pulse" href="http://localhost/">
-                                    <button>View All</button>
-                                </a>
-                            </div> -->
-
-                            <br>
-
-                            <a rel="pulse" class="button" href="dariusassemi/videos/">
-                                    <button class="button-style pulse">View All</button>
-                            </a>
-
+                             
+                         </div>
                     </div>
-            </section>
-            <br>
+
+
+                     <br>
+
+                    <a rel="pulse" class="button" href="videogallerysection/">
+                        <button class="button-style pulse">View All</button>
+                    </a>
+
+                </div>
+            </section>        
+
 
             <section id="websites">
                 <div class="indent clear">
@@ -184,7 +177,6 @@ get_header(); ?>
                     <!-- .indent -->
             </section>
             <!-- #testimonials -->
-
             </section>
 
         </main>

@@ -42,6 +42,11 @@ get_header(); ?>
 <style type="text/css">
   
 
+
+
+/************************************* responsive *********************************************************/
+
+
 @media screen and (max-width: 1539px) and (min-width: 1160px){ 
     .content-area-lander-page {
          margin-left: 0; 
@@ -58,13 +63,15 @@ get_header(); ?>
 }
  
 
+
+
+/************************************* orientation ********************************************/
+
  .shifted {
       margin-top: 54px;
   }
   
   #primary {
-      /*background:linear-gradient(0deg,rgba(255,255,255,0.8),rgba(10,10,10,0.7));*/
-      /*background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 250, 220, 0.7));*/
       background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(75, 127, 168,0.2));
   } 
  
@@ -84,6 +91,9 @@ get_header(); ?>
       margin-left:50vw;
   }
 
+
+  /************************************* image css ********************************************/
+
    img {
       padding: 20px;
       margin-top: 10px;
@@ -92,20 +102,27 @@ get_header(); ?>
       margin-left: 10vw;
       /*height: auto;*/
   }
+
+
+
+
+
+    /************************************* title ********************************************/
   .bio-title {
       font-size: 50px;
       font-weight: bold;
       padding: 2rem;
-      font-family: Lato;
+      font-family: Montserrat;
       text-align: center;
       margin-left: -30vw;
       height: auto;
   }
   
 
+    /************************************* description ********************************************/
   .des-section{
       font-size: 1.65rem;
-      font-family: Lato;
+      font-family: Montserrat;
       text-align: justify;
       height: auto;
       /*margin-left: 30vw;*/
@@ -123,6 +140,7 @@ get_header(); ?>
 
   }
 
+    /************************************* divider ********************************************/
   #divider {
       width: 50%;
       margin: auto;
@@ -133,8 +151,13 @@ get_header(); ?>
       padding: 2px;
 
   }
+
+
+
+
+    /************************************* mobile responsive ********************************************/
   
-  @media screen and (min-width: 320px) and (max-width: 490px) {
+  @media screen and (min-width: 320px) and (max-width: 520px) {
       img {
           width: 80%;
           height: 350px;
@@ -170,23 +193,34 @@ get_header(); ?>
           width: 60%;
       }
   }
+
+  @media screen and (max-width: 600px) and (min-width: 1100px) {
+
+      #primary{
+
+        height: 350vh;
+
+      }
+
+  }
   
-  @media screen and (min-width: 491px) and (max-width: 768px) {
+  @media screen and (min-width: 521px) and (max-width: 625px) {
       #image {
-          width: 500px;
+          width: 75%;
           padding: 50px;
-          height: 350px;
+          height: 450px;
           margin-top: 30px;
+          margin-left: -7vw;
       }
       .bio-title {
           font-size: 30px;
           letter-spacing: 0.2px;
           line-height: 5px;
           text-align: center;
-          margin-left: -30vw;
+          margin-left: -40vw;
       }
       #divider {
-          margin-left: 0vw;
+          margin-left: -5vw;
           margin-top: 20px;
       }
       p {
@@ -194,11 +228,11 @@ get_header(); ?>
           letter-spacing: 0.2px;
           text-indent: 0px;
           line-height: 25px;
-          margin-left: 80px;
+          margin-left: -5vw;
       }
       .left {
           margin: auto;
-          width: 50%;
+          width: 100%;
           margin-left: 20vw;
       }
      .right {
@@ -209,35 +243,36 @@ get_header(); ?>
       }
   }
   
-  @media screen and (min-width:769px) and (max-width:1150px) {
-      #image {
-          width: 100%;
-          padding: 50px;
+  @media screen and (min-width:626px) and (max-width:745px) {
+      .img-section #image {
+          width: 75%;
+          padding: 35px;
           height: 450px;
           margin-top: 100px;
+          margin-left: -7vw;
       }
       .bio-title {
           font-size: 30px;
           letter-spacing: 0.2px;
           line-height: 5px;
-          margin-left: -50px;
-          margin-top: 50px;
+          margin-left: -10vw;
+          margin-top: 20px;
       }
       #divider {
           margin-top: 25px;
-          margin-left: 15vw;
+          margin-left: 12vw;
       }
       p {
           font-size: 13px;
           letter-spacing: 0.2px;
           text-indent: 0px;
           line-height: 25px;
-          padding-left:30vw;
+          padding-left:20vw;
           /*padding-right: 6.5rem;*/
       }
       .left {
           margin: auto;
-          width: 50%;
+          width: 100%;
           margin-left: 19vw;
       }
       .right {
@@ -247,35 +282,76 @@ get_header(); ?>
       }
   }
   
-  @media screen and (min-width:1150px) and (max-width:1900px) {
+  @media screen and (min-width:746px) and (max-width:850px) {
      #image {
-          width: 100%;
+          width: 70%;
           padding: 50px;
           height: 450px;
           margin-top: 100px;
+          margin-left: -5vw;
       }
       .bio-title {
           font-size: 30px;
           letter-spacing: 0.2px;
           line-height: 5px;
-          margin-left: -50px;
+          margin-left: -15vw;
           margin-top: 50px;
       }
       #divider {
           margin-top: 25px;
-          margin-left: 15vw;
+          margin-left: 10vw;
       }
       p {
           font-size: 13px;
           letter-spacing: 0.2px;
           text-indent: 0px;
           line-height: 25px;
-          padding-left:30vw;
+          padding-left:18vw;
           /*padding-right: 6.5rem;*/
       }
       .left {
           margin: auto;
-          width: 50%;
+          width: 100%;
+          margin-left: 19vw;
+      }
+      .right {
+          /*margin: auto;*/
+          width: 70%;
+          margin-left: 23vw;
+      }
+  }
+
+
+    @media screen and (min-width:851px) and (max-width:940px) {
+     #image {
+          width: 75%;
+          padding: 50px;
+          height: 550px;
+          margin-top: 100px;
+          margin-left: -6vw;
+      }
+      .bio-title {
+          font-size: 30px;
+          letter-spacing: 0.2px;
+          line-height: 5px;
+          margin-left: -15vw;
+          margin-top: 50px;
+      }
+      #divider {
+          margin-top: 25px;
+          margin-left: 10vw;
+      }
+      p {
+          font-size: 13px;
+          letter-spacing: 0.2px;
+          text-indent: 0px;
+          line-height: 25px;
+          padding-left:18vw;
+          /*padding-right: 6.5rem;*/
+      }
+      .left {
+          margin: auto;
+          width: 100%;
           margin-left: 19vw;
       }
       .right {
@@ -286,8 +362,6 @@ get_header(); ?>
 
 
   }
-
-
   
-
+  
 </style>
